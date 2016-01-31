@@ -1,0 +1,96 @@
+body{
+    font-family: "Microsoft Yahei", sans-serif;
+    background-color: #D4D5E0;
+}
+
+a{
+    color: #666;
+}
+
+a:hover{
+    color: #555;
+}
+
+.content{
+    border: 1px #666 solid;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 2px;
+    margin: auto 150px;
+}
+
+hr{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    background-color: #888;
+    height: 1px;
+}
+
+.idcontent .idname{
+    font-size: 14px;
+}
+
+.idcontent .idinfo{
+    display: flex;
+    flex-direction: row;
+    font-size: 8px;
+    color: #3c3c3c;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.contentsection{
+    padding-left: 20px;
+}
+
+.contentsection ul li{
+    display: inline-block;
+}
+
+.footer .footerdetail{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 10px;
+}
+
+.p1, .p2, .p3{
+    flex:1;
+    -webkit-flex: 1;
+    padding: 10px auto;
+}
+
+#cmt{
+    font-size: 8px;
+}
+
+#cmt .comdetail {
+    display: flex;
+    flex-direction: row;
+}
+
+.comment .comdetail .comname{
+    display: flex;
+    flex-direction: row;
+}
+
+.comment{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+
+
+
+
+
+
+
+

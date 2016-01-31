@@ -1,0 +1,77 @@
+body{
+    font-family: "Microsoft Yahei", sans-serif;
+    background-color: #D4D5E0;
+}
+hr{
+    background-color: #666;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+a{
+    color: #666;
+}
+
+a:hover{
+    color: #555;
+}
+
+.all{
+    display: flex;
+    flex-direction: row;
+}
+
+.id{
+    border: 1px #555555 solid;
+    display: -webkit-flex;
+    display: flex;
+    display: block;
+    background-color: #ffffff;
+    border-radius: 3px;
+    margin: 0 120px;
+}
+.id .iditem{
+    display: flex;
+    flex-direction: row;
+}
+
+.i{
+    display: flex;
+    flex-direction: column;
+}
+
+.i .line1, .line2{
+    display: flex;
+    flex-direction: row;
+}
+
+.line1 .vip, .sex, .location{
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.line2 .attentioncount, .fanscount, .weibocount{
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.line1 .space, .line2 .space{
+    flex: 4;
+    -webkit-flex: 4;
+}
+
+.headimg{
+    width: 150px;
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 30px;
+}
+.info{
+    -webkit-flex: 8;
+    flex: 8;
+    margin: 20px 30px;
+}
+
+
+

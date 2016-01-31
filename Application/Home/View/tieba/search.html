@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <!-- <link rel="stylesheet" href="css/font-awesome.min.css">-->
+    <style type="text/css">
+        .search-div{
+            padding: 0 auto;
+        }
+
+        .search-form{
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+
+        .input-group-addon{
+            padding: 0;
+            margin: 0;
+        }
+
+        .search-text{
+            height: 36px;
+        }
+
+        .form-group{
+            padding: 100px;
+            margin: 0 auto;
+        }
+
+        .selection{
+            height: 108%;
+            border-radius: 0;
+        }
+
+        .search-button{
+            height: 144%;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-div">
+        <form class="form-inline search-form">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <select class="selection">
+                            <option class="id" value = "1">ID</option>
+                            <option class="content" value="2">Content</option>
+                            <option class="both" value="3">Both</option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-control search-text" placeholder="请输入关键词">
+                    <div class="input-group-addon">
+                        <button type="submit" class="search-button btn btn-primary">搜 索</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

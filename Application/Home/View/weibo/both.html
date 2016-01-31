@@ -1,0 +1,58 @@
+<div class="all">
+    <div class="id">
+        <volist name="data" id="vo">
+            <div class="iditem">
+                <a href="#">
+                    <div class="headimg">
+                        <a href="#"><img src="__PUBLIC__/img/sina.jpg" width="72" height="72"></a>
+                    </div>
+                    <div class="info">
+                        <div class="i">
+                            <div class="uname"><a href="__URL__/personal?id=<{$vo.id}>"><{$vo.uname}></a>&nbsp</div>
+                            <div class="vip"><{$vo.vip}></div>
+                        </div>
+                        <div class="location"><{$vo.location}></div>
+                        <div class="fanscount">
+                        <a href="__URL__/getFans?id=<{$vo.fans}>">粉丝：<{$vo.fanscount}></a></div>
+
+                    </div>
+                </a>
+            </div>
+            <hr/>
+        </volist>
+    </div>
+<div class="content">
+   <volist name="weibo" id="vol">
+       <div>
+           <header class="header">
+               <a href="#" ><img src="__PUBLIC__/img/sina.jpg" height="32" width="32"></a>
+               <div class="idcontent">
+                   <a href="__URL__/personal?id=<{$vol.uid}>" class="idname"><{$vol.uname}></a>
+                   <div class="idinfo">
+                       <p><{$vol.posttime}></p>
+                       <p><a href="#"><{$vol.url}></a></p>
+                   </div>
+               </div>
+           </header>
+           <a href="__URL__/detail?id=<{$vol.id}>">
+           <section class="contentsection">
+               <p class="text"><{$vol.content}></p>
+               <div class="pic">
+                   <ul>
+                       <li><{$vol.resourceurl}></li>
+                   </ul>
+               </div>
+           </section></a>
+           <hr/>
+           <footer class="footer">
+               <p class="p1">转发:<{$vol.rtcount}></p>
+               <div style="width: 1.5px; height: 20px; background-color: #888"></div>
+               <p class="p2">点赞:<{$vol.praisecount}></p>
+               <div style="width: 1.5px; height: 20px; background-color: #888"></div>
+               <p class="p3">评论:<{$vol.commentcount}></p>
+           </footer>
+       </div>
+       <hr/>
+   </volist>
+</div>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/both.css">
