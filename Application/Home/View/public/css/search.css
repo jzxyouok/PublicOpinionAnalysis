@@ -1,0 +1,11 @@
+body{
+    font-family: "Microsoft Yahei", sans-serif;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.select{
+    height: 32px;
+    width: 64px;
+}

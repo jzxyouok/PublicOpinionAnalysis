@@ -1,0 +1,113 @@
+body{
+    font-family: "Microsoft Yahei", sans-serif;
+    font-size: 14px;
+    background-color: #D4D5E0;
+}
+
+hr{
+    background-color: #666;
+    height: 1px;
+    margin: 10px 0;
+}
+
+a{
+    color: #666;
+}
+
+a:hover{
+    color: #555;
+}
+
+.all{
+    display: flex;
+    flex-direction: column;
+}
+
+.id{
+    border: 1px #555555 solid;
+    display: -webkit-flex;
+    display: flex;
+    display: block;
+    background-color: #ffffff;
+    border-radius: 3px;
+    margin: 0 150px;
+    height: 300px;
+}
+
+.id .iditem{
+    display: flex;
+    flex-direction: column;
+}
+
+.headimg{
+    width: 150px;
+    margin: 30px auto;
+}
+
+.uname{
+    margin: 20px auto;
+}
+
+.i{
+    display: flex;
+    flex-direction: row;
+}
+
+.i .vip, .location, .fanscount, .attentioncount{
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.info{
+    text-align: center;
+}
+
+.content{
+    border: 1px #666 solid;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 3px;
+    margin: 10px 150px;
+}
+
+.content .contentsection{
+    padding: 30px;
+}
+
+.idcontent .idname{
+    font-size: 14px;
+}
+
+.idcontent .idinfo{
+    display: flex;
+    flex-direction: row;
+    font-size: 8px;
+    color: #3c3c3c;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.contentsection ul li{
+    display: inline-block;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 10px;
+}
+
+.p1, .p2, .p3{
+    flex:1;
+    -webkit-flex: 1;
+}
+
+
+
+
+

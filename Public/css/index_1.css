@@ -1,0 +1,36 @@
+body{
+    font-family: "Microsoft Yahei", sans-serif;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.nav{
+    width:60%;
+}
+
+.navbar .nav title{
+    width:50px;
+    font-size: 16px;
+    text-align:center;
+}
+
+.icox .section{
+    display: inline-block;
+    position: relative;
+
+}
+/*
+
+.icon .section{
+    height: 100px;
+    width: 100px;
+    background-color: #0088cc;
+}
+*/
+
+.icon img{
+    height: 100px;
+    width: auto;
+}
+
