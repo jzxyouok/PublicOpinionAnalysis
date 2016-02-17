@@ -1,0 +1,34 @@
+    <div class="id" id="id">
+        <volist name="data" id="vo">
+            <div class="iditem">
+                <a href="#">
+                    <div class="headimg">
+                        <a href="#"><img src="__PUBLIC__/img/sina.jpg" width="128" height="128"></a>
+                    </div>
+                    <div class="info">
+                        <div class="uname"><h3><a href="__URL__/personal?id=<{$vo.id}>"><{$vo.username}></a></h3></div>
+                        <div class="i">
+                            <div class="line1">
+                                <p class="vip"><{$vo.individualSignature}></p>
+                                <p class="sex"><{$vo.sex}></p>
+                                <p class="location"><{$vo.location}></p>
+                                <p class="regtime"><{$vo.regtime}></p>
+                                <p class="anotherName"><{$vo.anotherName}></p>
+                                <p class="otherInfo"><{$vo.otherInfo}></p>
+                                <p class="space"></p>
+                            </div>
+                            <div class="line2">
+                                <!-- 此处的数字暂时未猜测的 -->
+                                <p class="attentioncount">关注:<{$vo.number6}></p>
+                                <p class="fanscount"><a href="__URL__/getFans?id=<{$vo.fans}>">粉丝：<{$vo.number5}></a></p>
+                                <p class="weibocount">微博:<{$vo.number4}></p>
+                                <p class="space"></p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <hr />
+        </volist>
+    </div>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/id.css">
