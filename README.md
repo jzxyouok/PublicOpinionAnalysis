@@ -26,3 +26,6 @@ sql导入的文件放在[这里](https://coding.net/u/mkliu/p/PublicOpinionAnaly
 5. 编写NewWeiboController,更改了index,search方法并部分改写了view里面的index.html,但是结果没有正常显示(数组内容正确)
 6. view有待更新
 
+##2016/2/18更新内容
+
+1.删除了不必要的index.html
