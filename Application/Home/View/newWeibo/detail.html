@@ -7,8 +7,8 @@
                 <div class="idcontent">
                     <a href="__URL__/personal?id=<{$vol.uid}>" class="idname"><{$vol.uname}></a>
                     <div class="idinfo">
-                        <p><{$vol.posttime}></p>
-                        <p><a href="#"><{$vol.url}></a></p>
+                        <p><{$vol.time}></p>
+                        <p><a href="#"><{$vol.datasource}></a></p>
                     </div>
                 </div>
             </header>
@@ -16,18 +16,18 @@
                 <p class="text"><{$vol.content}></p>
                 <div class="pic">
                     <ul>
-                        <li><{$vol.resourceurl}></li>
+                        <li><{$vol.picturesource}></li>
                     </ul>
                 </div>
             </section>
             <hr/>
             <footer class="footer">
                 <div class="footerdetail">
-                    <p class="p1">转发:<{$vol.rtcount}></p>
+                    <p class="p1">转发:<{$vol.number1}></p>
                     <div style="width: 1.5px; height: 20px; background-color: #888"></div>
-                    <p class="p2">点赞:<{$vol.praisecount}></p>
+                    <p class="p2">点赞:<{$vol.number2}></p>
                     <div style="width: 1.5px; height: 20px; background-color: #888"></div>
-                    <p class="p3">评论:<{$vol.commentcount}></p>
+                    <p class="p3">评论:<{$vol.number3}></p>
                 </div>
                 <hr/>
                 <div class="allcomment">
@@ -44,7 +44,7 @@
                             </header>
                             <footer class="comfooter">
                                 <div class="idinfo">
-                                    <p><{$cmt.posttime}></p>
+                                    <p><{$cmt.time}></p>
                                 </div>
                             </footer>
                         </div>

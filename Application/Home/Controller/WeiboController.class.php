@@ -20,7 +20,7 @@ class WeiboController extends Controller {
         $arr2 = $m2->search3();//第一条。。
         $this->assign("weibo",$arr2);
 
-       	$content = $this->fetch('weibo:index');  //->fetch('Admin:index'
+       	$content = $this->fetch('newnewweibo:index');  //->fetch('Admin:index'
 		$this->assign("content",$content);
 		$this->display("public:tpl");
     }
@@ -44,7 +44,7 @@ class WeiboController extends Controller {
     		$arr2 = $m2->search();
     		//var_dump($arr2);
     		$this->assign("weibo",$arr2);
-    		$content = $this->fetch('weibo:both');
+    		$content = $this->fetch('newweibo:both');
 
     		$this->assign("content",$content);
     	}
@@ -54,7 +54,7 @@ class WeiboController extends Controller {
     		$m1 = new \Home\Model\WeiboUserModel();
     		$arr1 = $m1->search();
     		$this->assign("data",$arr1);
-    		$content = $this->fetch('weibo:searchperson');
+    		$content = $this->fetch('newweibo:searchperson');
     		$this->assign("content",$content);
     		//var_dump($arr1);
     	}
@@ -65,14 +65,14 @@ class WeiboController extends Controller {
     		$arr2 = $m2->search();
     		//var_dump($arr2);
     		$this->assign("weibo", $arr2);
-    		$content = $this->fetch('weibo:content');
+    		$content = $this->fetch('newweibo:content');
     		//var_dump($arr2);
     		$this->assign("content",$content);
     	}
     		
     	//$this->assign("arr",$arr1);
     	
-    	//$content = $this->fetch('weibo:search');  //->fetch('Admin:index'
+    	//$content = $this->fetch('newweibo:search');  //->fetch('Admin:index'
 		$this->assign("content",$content);
     	$this->display("public:tpl");
 
@@ -81,7 +81,7 @@ class WeiboController extends Controller {
 
     public function personal(){
         $m1 = new \Home\Model\WeiboUserModel();
-        $arr1 = $m1->search2();    
+        $arr1 = $m1->search2();
 
         $this->assign("data",$arr1);
 
@@ -89,7 +89,7 @@ class WeiboController extends Controller {
         $arr2 = $m2->search2($arr1[0]['name']);
         //var_dump($arr2);
         $this->assign("weibo",$arr2);
-        $content = $this->fetch('weibo:personal');  //->fetch('Admin:index'
+        $content = $this->fetch('newweibo:personal');  //->fetch('Admin:index'
 		$this->assign("content",$content);
     	$this->display("public:tpl");       
     }
@@ -109,7 +109,7 @@ class WeiboController extends Controller {
         //var_dump($arr3);
         $this->assign("comment",$arr3);
 
-        $content = $this->fetch('weibo:detail');  //->fetch('Admin:index'
+        $content = $this->fetch('newweibo:detail');  //->fetch('Admin:index'
 		$this->assign("content",$content);
     	$this->display("public:tpl");   
     }

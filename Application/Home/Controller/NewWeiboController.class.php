@@ -3,29 +3,26 @@ namespace Home\Controller;
 use Think\Controller;
 class NewWeiboController extends Controller {
     public function index(){
-       //$m = D("weibo_user");
 
-        // $m = new \Home\Model\WeiboUserModel();
-
-        // $arr = $m->search();
-        // var_dump($arr);
         $m1 = new \Home\Model\NewWeiboUserModel();
         $arr1 =$m1->query("select * from user_info order by number4 DESC limit 1");
-        // var_dump($arr1);
+
         $this->assign("data",$arr1);
 
         $m2 = new \Home\Model\NewWeiboContentModel();
 
-        // $arr2 =$m2->query("select * from weibo_content order by praiseCount DESC limit 1");
-
-        $arr2 = $m2->search3();//第一条。。
+        $arr2 = $m2->search3();
         $this->assign("newWeibo",$arr2);
-        var_dump($arr2);
 
-       	$content = $this->fetch('newWeibo:index');  //->fetch('Admin:index'
+       	$content = $this->fetch('newWeibo:index');
 		$this->assign("content",$content);
 		$this->display("public:tpl");
     }
+
+    public function test(){
+        echo "????";
+    }
+
     public function _empty($name){
 
         $this->display("public:tpl");
@@ -37,15 +34,16 @@ class NewWeiboController extends Controller {
     	$type = $_GET['type'];
     	if($type == "3")
     	{
+            // 同时搜索人与内容
     		$m1 = new \Home\Model\NewWeiboUserModel();
     		$arr1 = $m1->search();
     		$this->assign("data",$arr1);
-    		var_dump($arr1);
+    		// var_dump($arr1);
 
     		$m2 = new \Home\Model\NewWeiboContentModel();
     		$arr2 = $m2->search();
     		var_dump($arr2);
-    		$this->assign("newWeibo",$arr2);
+    		$this->assign("weibo",$arr2);
     		$content = $this->fetch('newWeibo:both');
 
     		$this->assign("content",$content);
@@ -53,56 +51,54 @@ class NewWeiboController extends Controller {
 
     	if ($type == "1")
     	{
+            // 仅搜索人
     		$m1 = new \Home\Model\NewWeiboUserModel();
     		$arr1 = $m1->search();
     		$this->assign("data",$arr1);
     		$content = $this->fetch('newWeibo:searchperson');
     		$this->assign("content",$content);
-    		var_dump($arr1);
+    		// var_dump($arr1);
     	}
     		
     	if ($type == "2")
     	{
+            // 仅搜索内容
     		$m2 = new \Home\Model\NewWeiboContentModel();
     		$arr2 = $m2->search();
     		$this->assign("weibo", $arr2);
     		$content = $this->fetch('newWeibo:content');
-    		var_dump($arr2);
+    		// var_dump($arr2);
     		$this->assign("content",$content);
     	}
     		
-    	//$this->assign("arr",$arr1);
-    	
-    	//$content = $this->fetch('weibo:search');  //->fetch('Admin:index'
 		$this->assign("content",$content);
     	$this->display("public:tpl");
-
-
     }
 
     public function personal(){
-        $m1 = new \Home\Model\WeiboUserModel();
-        $arr1 = $m1->search2();    
-
+        $m1 = new \Home\Model\NewWeiboUserModel();
+        $arr1 = $m1->search2();
+        // print_r($arr1);
         $this->assign("data",$arr1);
 
-        $m2 = new \Home\Model\WeiboContentModel();
-        $arr2 = $m2->search2($arr1[0]['name']);
+        $m2 = new \Home\Model\NewWeiboContentModel();
+        $arr2 = $m2->search2($arr1[0]['userid']);
         //var_dump($arr2);
         $this->assign("weibo",$arr2);
-        $content = $this->fetch('weibo:personal');  //->fetch('Admin:index'
+        $content = $this->fetch('NewWeibo:personal');
+
 		$this->assign("content",$content);
     	$this->display("public:tpl");       
     }
 
 	public function detail(){
         //接收contentid,在comment中按照contentid查找
-        $m = new \Home\Model\WeiboContentModel();
+        $m = new \Home\Model\NewWeiboContentModel();
         $arr = $m->search3();
 
         $this->assign("weibo",$arr);
 
-        var_dump($arr);
+        // var_dump($arr);
 
         //echo "</br> this is comment </br></br>";
         $m3 = new \Home\Model\WeiboCommentModel();
@@ -110,7 +106,7 @@ class NewWeiboController extends Controller {
         //var_dump($arr3);
         $this->assign("comment",$arr3);
 
-        $content = $this->fetch('weibo:detail');  //->fetch('Admin:index'
+        $content = $this->fetch('NewWeibo:detail');  //->fetch('Admin:index'
 		$this->assign("content",$content);
     	$this->display("public:tpl");   
     }
@@ -122,7 +118,7 @@ class NewWeiboController extends Controller {
         //echo $ids;
         $n = split(";", $ids);
 
-        $m1 = new \Home\Model\WeiboUserModel();
+        $m1 = new \Home\Model\NewWeiboUserModel();
 
         $data['name'] =array('in' , $n);
 
@@ -130,10 +126,9 @@ class NewWeiboController extends Controller {
 
         $this->assign('data',$arr);
 
-        $content = $this->fetch('Weibo:searchperson');
+        $content = $this->fetch('NewWeibo:searchperson');
         $this->assign('content',$content);
         $this->display("public:tpl");
-
     }
 
 }

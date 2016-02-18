@@ -7,12 +7,12 @@
                         <a href="#"><img src="__PUBLIC__/img/sina.jpg" width="100" height="100"></a>
                     </div>
                     <div class="info">
-                        <div class="uname"><a href="#"><{$vo.uname}></a></div>
+                        <div class="uname"><a href="#"><{$vo.username}></a></div>
                         <div class="i">
                             <p class="vip">V：<{$vo.vip}></p>
                             <p class="location"><{$vo.location}></p>
-                            <p class="fanscount"><a href="__URL__/getFans?id=<{$vo.fans}>">粉丝：<{$vo.fanscount}></a></p>
-                            <p class="attentioncount">微博：<{$vo.attentioncount}></p>
+                            <p class="fanscount"><a href="__URL__/getFans?id=<{$vo.fans}>">粉丝：<{$vo.number2}></a></p>
+                            <p class="attentioncount">微博：<{$vo.number3}></p>
                         </div>
                     </div>
                 </a>
@@ -30,31 +30,31 @@
                         <ul>
                             <!-- <li><{$vol.resourceurl}></li> -->
                             
-                            <?php 
-                               $img =split(";", $vol['resourceurl']);
+ <!--                            <?php 
+                               $img =split(";", $vol['picturesource']);
                                //var_dump($img);
                                foreach ($img as $key => $value) {
                                    echo "<li><img src=".$value."></li>";
                                }
-                            ?>
+                            ?> -->
 
                             <!-- <li><img src="<{$vol.resourceurl}>"></li> -->
                         </ul>
                     </div>
                     <div class="idcontent">
                         <div class="idinfo">
-                            <p><{$vol.posttime}></p>
-                            <p><a href="#"><{$vol.url}></a></p>
+                            <p><{$vol.time}></p>
+                            <p><a href="#"><{$vol.datasource}></a></p>
                         </div>
                     </div>
                 </section></a>
                 <hr/>
                 <footer class="footer">
-                    <p class="p1">转发:<{$vol.rtcount}></p>
+                    <p class="p1">转发:<{$vol.number1}></p>
                     <div style="width: 1.5px; height: 30px; background-color: #888"></div>
-                    <p class="p2">点赞:<{$vol.praisecount}></p>
+                    <p class="p2">点赞:<{$vol.number2}></p>
                     <div style="width: 1.5px; height: 30px; background-color: #888"></div>
-                    <p class="p3">评论:<{$vol.commentcount}></p>
+                    <p class="p3">评论:<{$vol.number3}></p>
                 </footer>
             </div>
             <hr/>

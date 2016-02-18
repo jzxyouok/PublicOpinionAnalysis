@@ -28,4 +28,7 @@ sql导入的文件放在[这里](https://coding.net/u/mkliu/p/PublicOpinionAnaly
 
 ##2016/2/18更新内容
 
-1.删除了不必要的index.html
+1.删除了不必要的index.html，和一些乱糟糟的文件布局。
+2.用的是第一份上传的.sql暂不改动。字段不明。。
+3.各种改原先的字段名。重新熟悉了下ThinkPHP。目前可以正常使用。
+4.改完，很多明显的问题出现。一会开讨论，具体说下。

@@ -13,16 +13,23 @@ class NewWeiboUserModel extends Model {
 		$key =  $_GET['str'];
 		$data['username'] =array("like",array("%$key%"));
 		$arr = $this->where($data)->select();
+		// 调试时可使用下面这句限制输出
+		// $arr = $this->where($data)->limit(5)->select();
 		return $arr;
 	}
 
 	public function search2()
 	{
 		/*用于精确匹配*/
-		$key = $_GET['id'];
-		$data['id'] = $key;
-		$arr = $this->where($data)->select();
-		return $arr;
+
+		if (isset($_GET['id'])) {
+			# code...
+			$key = $_GET['id'];
+			$data['userid'] = $key;
+			$arr = $this->where($data)->select();
+			return $arr;
+		}
+		return False;
 	}
 	
 }
