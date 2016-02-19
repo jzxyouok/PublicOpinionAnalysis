@@ -12,8 +12,8 @@ class NewWeiboController extends Controller {
         $m2 = new \Home\Model\NewWeiboContentModel();
 
         $arr2 = $m2->search3();
-        $this->assign("newWeibo",$arr2);
-
+        $this->assign("weibo",$arr2);
+        // var_dump($arr2);
        	$content = $this->fetch('newWeibo:index');
 		$this->assign("content",$content);
 		$this->display("public:tpl");

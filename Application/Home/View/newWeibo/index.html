@@ -46,8 +46,8 @@
                             </div>
                             <div class="location"><{$vo.location}></div>
                             <div class="fanscount"><{$vo.sex}></div>
-                            <div class="anotherName"><{$vo.antherName}></div>
-                            <div class="regtime"><{$vo.regtime}></div>
+                            <div class="anotherName"><{$vo.otherInfo}></div>
+                            <div class="regtime"><{$vo.time}></div>
                             <div class="number1"><{$vo.number1}></div>
                         </div>
                     </a>
@@ -62,7 +62,7 @@
                     <header class="header">
                         <a href="#" ><img src="__PUBLIC__/img/sina.jpg" height="32" width="32"></a>
                         <div class="idcontent">
-                            <a href="__URL__/personal?id=<{$vol.userid}>" class="idname"><{$vol.username}></a>
+                            <a href="__URL__/personal?id=<{$vol.userid}>" class="idname"><{$vol.uname}></a>
                             <div class="idinfo">
                                 <p><{$vol.time}></p>
                                 <p><a href="<{$vol.datasource}>">信息源: <{$vol.datasource}></a></p>
@@ -73,7 +73,7 @@
                         <p class="text"><{$vol.content}></p>
                         <div class="pic">
                             <ul>
-                                <li><{$vol.picture}></li>
+                                <li><{$vol.picturesource}></li>
                             </ul>
                         </div>
                     </section>
