@@ -9,4 +9,4 @@ Runtime
 ThinkPHP/
 
 #application config
-Application/Home/Conf/config.php
+/Application/Home/Conf/config.php
