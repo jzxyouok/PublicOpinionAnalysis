@@ -7,3 +7,6 @@ configFile.php
 # run time is useless
 Runtime
 ThinkPHP/
+
+#application config
+Application/Home/Conf/config.php

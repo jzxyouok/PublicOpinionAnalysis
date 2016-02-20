@@ -131,4 +131,13 @@ class NewWeiboController extends Controller {
         $this->display("public:tpl");
     }
 
+    public function analysis()
+    {
+        $m1 = new \Home\Model\NewWeiboAnalysisPersonModel();
+        $arr = $m1->analysis();
+        var_dump($arr);
+        $this->assign('content',$content);
+        $this->display("public:tpl");
+    }
+
 }

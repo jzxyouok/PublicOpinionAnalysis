@@ -37,3 +37,7 @@ sql导入的文件放在[这里](https://coding.net/u/mkliu/p/PublicOpinionAnaly
 
 1. 昨天剩下了几个字段忘改了，改好了
 2. 金波正在写新的前端。。那现在就将就着。。
+
+##2016/2/20更新内容
+1. 编写了两个统计的model并在c层测试通过
+2. 添加数据库密码配置文件到.gitignore
