@@ -14,17 +14,17 @@ class NewWeiboAnalysisPersonModel extends Model {
 
 	public function analysis()//获取到具体人的发的所有信息（回复，发帖（根据idx），有theme
 	{
-		$userid = $_GET["userid"];
+		$userid = $_GET["id"];
 		$data["userid"] = $userid;
 		$data["_logic"] = "AND";
 
-		$week = array('Mon' => 1, "Tue" => 2, "Wed" => 3, "Thu" => 4, "Fri" => 5, "Sat" => 5, "Sun" => 7);
+		$week = array('Mon' => 0, "Tue" => 1, "Wed" => 2, "Thu" => 3, "Fri" => 4, "Sat" => 5, "Sun" => 6);
         $weekNumber = array();
 
         foreach ($week as $key => $value) {
             $data["time"] = array("like",array("%$key%"));
             $arr = $this->where($data)->select();
-            $weekNumber[$key] = count($arr);
+            $weekNumber[$value] = count($arr);
         }        
 
         $dayNumber = array();        

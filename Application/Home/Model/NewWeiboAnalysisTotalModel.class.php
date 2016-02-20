@@ -1,8 +1,9 @@
 <?php
 namespace Home\Model;
-use Think\Model\RelationModel;
+use Think\Model;
 
-class NewWeiboAnalysisTotalModel extends RelationModel {
+class NewWeiboAnalysisTotalModel extends Model {
+
 
 	/*
 	参数说明
@@ -14,13 +15,13 @@ class NewWeiboAnalysisTotalModel extends RelationModel {
 
 	public function analysis()//获取到具体人的发的所有信息（回复，发帖（根据idx），有theme
 	{
-		$week = array('Mon' => 1, "Tue" => 2, "Wed" => 3, "Thu" => 4, "Fri" => 5, "Sat" => 5, "Sun" => 7);
+        $week = array('Mon' => 0, "Tue" => 1, "Wed" => 2, "Thu" => 3, "Fri" => 4, "Sat" => 5, "Sun" => 6);
         $weekNumber = array();
 
         foreach ($week as $key => $value) {
             $data["time"] = array("like",array("%$key%"));
             $arr = $this->where($data)->select();
-            $weekNumber[$key] = count($arr);
+            $weekNumber[$value] = count($arr);
         }        
 
         $dayNumber = array();        

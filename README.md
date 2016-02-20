@@ -41,3 +41,4 @@ sql导入的文件放在[这里](https://coding.net/u/mkliu/p/PublicOpinionAnaly
 ##2016/2/20更新内容
 1. 编写了两个统计的model并在c层测试通过
 2. 添加数据库密码配置文件到.gitignore
+3. 图表显示已完成，访问NewWeibo/analysis_1，NewWeibo/analysis_2

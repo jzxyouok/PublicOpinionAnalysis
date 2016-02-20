@@ -131,13 +131,21 @@ class NewWeiboController extends Controller {
         $this->display("public:tpl");
     }
 
-    public function analysis()
+    public function analysis_1()
     {
         $m1 = new \Home\Model\NewWeiboAnalysisPersonModel();
         $arr = $m1->analysis();
-        var_dump($arr);
-        $this->assign('content',$content);
-        $this->display("public:tpl");
+        
+        $this->assign('hours',json_encode($arr[0]));
+        $this->assign('weeks',json_encode($arr[1]));
+        $this->display("public:test");
     }
-
+    public function analysis_2()
+    {
+        $m1 = new \Home\Model\NewWeiboAnalysisTotalModel();
+        $arr = $m1->analysis();
+        $this->assign('hours',json_encode($arr[0]));
+        $this->assign('weeks',json_encode($arr[1]));
+        $this->display("public:test");
+    }
 }
