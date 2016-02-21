@@ -98,19 +98,13 @@ class NewWeiboController extends Controller {
 
         $this->assign("weibo",$arr);
 
-        // var_dump($arr);
-
-        //echo "</br> this is comment </br></br>";
-        $m3 = new \Home\Model\WeiboCommentModel();
-        $arr3 = $m3->search2();
-        //var_dump($arr3);
-        $this->assign("comment",$arr3);
-
         $content = $this->fetch('NewWeibo:detail');  //->fetch('Admin:index'
 		$this->assign("content",$content);
     	$this->display("public:tpl");   
     }
 
+    /*
+    暂时用不到,先给注释掉
     public function getFans()
     {
         //get id  
@@ -131,6 +125,7 @@ class NewWeiboController extends Controller {
         $this->display("public:tpl");
     }
 
+    */
     public function analysis_1()
     {
         $m1 = new \Home\Model\NewWeiboAnalysisPersonModel();

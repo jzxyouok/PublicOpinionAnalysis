@@ -42,3 +42,8 @@ sql导入的文件放在[这里](https://coding.net/u/mkliu/p/PublicOpinionAnaly
 1. 编写了两个统计的model并在c层测试通过
 2. 添加数据库密码配置文件到.gitignore
 3. 图表显示已完成，访问NewWeibo/analysis_1，NewWeibo/analysis_2
+
+##2016/2/21更新内容
+1. 精简内容,删除weibo相关的mvc,删除tieba相关的mv,贴吧c层只剩一个_empty方法
+2. 更新数据库,删除了无关内容
+3. 通过Application/Home/Conf/configFile.php来配置本地文件,详见讨论内容
