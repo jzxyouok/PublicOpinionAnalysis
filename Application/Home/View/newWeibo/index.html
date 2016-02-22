@@ -1,39 +1,8 @@
-﻿<div class="exp">
-    <img class="mainicon" src="__PUBLIC__/img/sina.jpg" height="200" width="200">
-    <div class="it">
-        <section class="col1">
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-            </ul>
-        </section>
-        <section class="col2">
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-            </ul>
-        </section>
-        <section class="col3">
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-            </ul>
-        </section>
-    </div>
-</div>
-<div class="every">
-    <div class="all">
-        <div class="id">
-            <volist name="data" id="vo">
+﻿<extend name="public:tpl" />
+<block name="content">
+    <div class="every">
+        <div class="all">
+            <div class="id">
                 <div class="iditem">
                     <a href="#">
                         <div class="headimg">
@@ -41,51 +10,84 @@
                         </div>
                         <div class="info">
                             <div class="i">
-                                <div class="uname"><a href="__URL__/personal?id=<{$vo.userid}>"><{$vo.username}></a>></div>
-                                <div class="vip"><{$vo.individualSignature}></div>
+                                <div class="uname"><a href="__URL__/personal?id=<{$vo.userid}>"><{$user.username}></a>></div>
+                                <div class="vip"><{$user.individualSignature}></div>
                             </div>
-                            <div class="location"><{$vo.location}></div>
-                            <div class="fanscount"><{$vo.sex}></div>
-                            <div class="anotherName"><{$vo.otherInfo}></div>
-                            <div class="regtime"><{$vo.time}></div>
-                            <div class="number1"><{$vo.number1}></div>
+                            <div class="location"><{$user.location}></div>
+                            <div class="fanscount"><{$user.sex}></div>
+                            <div class="anotherName"><{$user.otherInfo}></div>
+                            <div class="regtime"><{$user.time}></div>
+                            <div class="number1"><{$user.number1}></div>
                         </div>
                     </a>
                 </div>
                 <hr/>
-            </volist>
-        </div>
+            </div>
 
-        <div class="content">
-            <volist name="weibo" id="vol">
-                <div>
-                    <header class="header">
-                        <a href="#" ><img src="__PUBLIC__/img/sina.jpg" height="32" width="32"></a>
-                        <div class="idcontent">
-                            <a href="__URL__/personal?id=<{$vol.userid}>" class="idname"><{$vol.uname}></a>
-                            <div class="idinfo">
-                                <p><{$vol.time}></p>
-                                <p><a href="<{$vol.datasource}>">信息源: <{$vol.datasource}></a></p>
+            <div class="content">
+                <volist name="weibo" id="vol">
+                    <div>
+                        <header class="header">
+                            <a href="#" ><img src="__PUBLIC__/img/sina.jpg" height="32" width="32"></a>
+                            <div class="idcontent">
+                                <a href="__URL__/personal?id=<{$vol.userid}>" class="idname"><{$vol.uname}></a>
+                                <div class="idinfo">
+                                    <p><{$vol.time}></p>
+                                    <p><a href="<{$vol.datasource}>">信息源: <{$vol.datasource}></a></p>
+                                </div>
                             </div>
-                        </div>
-                    </header>
-                    <section class="contentsection">
-                        <p class="text"><{$vol.content}></p>
-                        <div class="pic">
-                            <ul>
-                                <li><{$vol.picturesource}></li>
-                            </ul>
-                        </div>
-                    </section>
+                        </header>
+                        <section class="contentsection">
+                            <p class="text"><{$vol.content}></p>
+                            <div class="pic">
+                                <ul>
+                                    <li><{$vol.picturesource}></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <hr/>
+                        <footer class="footer">
+                            <p class="p1">转发:<{$vol.number1}></p>
+                            <p class="p2">点赞:<{$vol.number2}></p>
+                            <p class="p3">评论:<{$vol.number3}></p>
+                        </footer>
+                    </div>
                     <hr/>
-                    <footer class="footer">
-                        <p class="p1">转发:<{$vol.number1}></p>
-                        <p class="p2">点赞:<{$vol.number2}></p>
-                        <p class="p3">评论:<{$vol.number3}></p>
-                    </footer>
-                </div>
-                <hr/>
-            </volist>
+                </volist>
+            </div>
         </div>
-</div>
-<link rel="stylesheet" href="__PUBLIC__/css/weiboindex.css">
+        <link rel="stylesheet" href="__PUBLIC__/css/weiboindex.css">
+        <div class="exp">
+            <img class="mainicon" src="__PUBLIC__/img/sina.jpg" height="200" width="200">
+            <div class="it">
+                <section class="col1">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </section>
+                <section class="col2">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </section>
+                <section class="col3">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+</block>
+
