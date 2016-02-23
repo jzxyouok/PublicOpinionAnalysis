@@ -95,7 +95,7 @@ class NewWeiboController extends BaseController {
         $this->display("public:header");
     }
 
-    */
+    
     public function analysis_1()
     {
         $m1 = D('TotalWeibo');
@@ -113,4 +113,5 @@ class NewWeiboController extends BaseController {
         $this->assign('weeks',json_encode($arr[1]));
         $this->display("public:test");
     }
+    */
 }
