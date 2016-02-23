@@ -26,7 +26,7 @@ class NewWeiboController extends BaseController {
 
     public function _empty($name){
 
-        $this->display("public:tpl");
+        $this->display("public:header");
         echo "该方法为空";
     }
 
@@ -36,22 +36,22 @@ class NewWeiboController extends BaseController {
             $type = $_GET['type'];
             $arr_user = null; $arr_cont = null;
 
-            if ($type == '3' || $type == '1') {
+            if ($type == 'both' || $type == 'id') {
                 $userModel = D('UserInfo'); 
                 $arr_user = $userModel->search($_GET['str']);
             }
-            if ($type == '3' || $type == '2') {
+            if ($type == 'both' || $type == 'cont') {
                 $contentModel = D('TotalWeibo');
                 $arr_cont = $contentModel->search($_GET['str']);
             }
             $this->assign('data', $arr_user); 
             $this->assign('weibo', $arr_cont);
 
-            $this->display('search_type'.$type);            
+            $this->display('search');            
         }
         else
         {
-            $this->display("public:tpl"); 
+            $this->display("public:header"); 
         }
 
     }
@@ -92,7 +92,7 @@ class NewWeiboController extends BaseController {
 
         $content = $this->fetch('NewWeibo:searchperson');
         $this->assign('content',$content);
-        $this->display("public:tpl");
+        $this->display("public:header");
     }
 
     */
