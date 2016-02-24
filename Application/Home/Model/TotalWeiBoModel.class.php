@@ -16,7 +16,7 @@ class TotalWeiboModel extends RelationModel {
 
     public function search($str)
     {
-    	$data['content'] =array("like",array("%$str%"));
+    	$data['content'] =array('like',array("%$str%"));
     	$arr = $this->relation(true)->where($data)->select();
     	return $arr;
     }

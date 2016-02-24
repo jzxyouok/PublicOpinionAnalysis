@@ -18,16 +18,17 @@ class NewWeiboController extends BaseController {
     public function index(){
 
         $aWhatEverUser = D('UserInfo')->find();
-        $this->assign("user", $aWhatEverUser);
-        $totalWeiboWithUser = D('TotalWeibo')->find();
-        $this->assign("weibo", $totalWeiboWithUser);
+        $this->assign('user', $aWhatEverUser);
+        $totalWeiboWithUser = D('TotalWeibo')->relation(true)->find();
+        print_r($totalWeiboWithUser);
+        $this->assign('weibo', $totalWeiboWithUser);
         $this->display();
     }
 
     public function _empty($name){
 
-        $this->display("public:header");
-        echo "该方法为空";
+        $this->display('public:header');
+        echo '该方法为空';
     }
 
     public function search(){
@@ -47,11 +48,11 @@ class NewWeiboController extends BaseController {
             $this->assign('data', $arr_user); 
             $this->assign('weibo', $arr_cont);
 
-            $this->display('search');            
+            $this->display();            
         }
         else
         {
-            $this->display("public:header"); 
+            $this->display('public:header'); 
         }
 
     }
@@ -60,17 +61,17 @@ class NewWeiboController extends BaseController {
         $userModel = D('UserInfo'); 
         $arr = $userModel->searchByid($_GET['id']);
 
-        $this->assign("vo",$arr['user']);
-        $this->assign("weibo",$arr['weibos']);
+        $this->assign('vo',$arr['user']);
+        $this->assign('weibo',$arr['weibos']);
 
-        $this->display("personal");  
+        $this->display();  
     }
 
 	public function detail(){
         $contentModel = D('TotalWeibo');
         $arr = $contentModel->searchByid($_GET['id']);
-        $this->assign("weibo",$arr);
-    	$this->display("detail");   
+        $this->assign('weibo',$arr);
+    	$this->display();   
     }
 
     /*
@@ -80,7 +81,7 @@ class NewWeiboController extends BaseController {
         //get id  
         $ids = $_GET['id'];
         //echo $ids;
-        $n = split(";", $ids);
+        $n = split(';', $ids);
 
         $m1 = new \Home\Model\NewWeiboUserModel();
 
@@ -92,7 +93,7 @@ class NewWeiboController extends BaseController {
 
         $content = $this->fetch('NewWeibo:searchperson');
         $this->assign('content',$content);
-        $this->display("public:header");
+        $this->display('public:header');
     }
 
     
@@ -103,7 +104,7 @@ class NewWeiboController extends BaseController {
         
         $this->assign('hours',json_encode($arr[0]));
         $this->assign('weeks',json_encode($arr[1]));
-        $this->display("public:test");
+        $this->display('public:test');
     }
     public function analysis_2()
     {
@@ -111,7 +112,7 @@ class NewWeiboController extends BaseController {
         $arr = $m1->analysis_2();
         $this->assign('hours',json_encode($arr[0]));
         $this->assign('weeks',json_encode($arr[1]));
-        $this->display("public:test");
+        $this->display('public:test');
     }
     */
 }

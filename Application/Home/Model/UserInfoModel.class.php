@@ -17,7 +17,7 @@ class UserInfoModel extends RelationModel {
 	
     public function search($str)
     {
-        $data['username'] =array("like",array("%$str%"));
+        $data['username'] =array('like',array("%$str%"));
         $arr = $this->where($data)->select();
         return $arr;
     }
