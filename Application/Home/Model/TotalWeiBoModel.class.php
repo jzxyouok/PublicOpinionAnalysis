@@ -21,16 +21,4 @@ class TotalWeiboModel extends RelationModel {
     	return $arr;
     }
 
-    public function searchByid($id)
-    {
-        if(isset($id))
-        {
-            $data['id'] = $id;
-            $arr = $this->relation(true)->where($data)->select();
-            return $arr;
-        }
-        else
-            return false;
-    }
-
 }

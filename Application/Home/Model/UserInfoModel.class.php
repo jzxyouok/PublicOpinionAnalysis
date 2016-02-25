@@ -22,19 +22,5 @@ class UserInfoModel extends RelationModel {
         return $arr;
     }
 
-    public function searchByid($id)
-    {
-        if(isset($id))
-        {
-            $data['userid'] = $id;
-            $arr = null;
-            $arr['user'] = $this->where($data)->find();
-            $arr['weibos'] = $this->relationGet(true);
-            return $arr ;            
-        }
-        else
-            return false;
-    }
-    
 }
 

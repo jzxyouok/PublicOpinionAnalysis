@@ -20,7 +20,6 @@ class NewWeiboController extends BaseController {
         $aWhatEverUser = D('UserInfo')->find();
         $this->assign('user', $aWhatEverUser);
         $totalWeiboWithUser = D('TotalWeibo')->relation(true)->find();
-        print_r($totalWeiboWithUser);
         $this->assign('weibo', $totalWeiboWithUser);
         $this->display();
     }
@@ -59,7 +58,7 @@ class NewWeiboController extends BaseController {
 
     public function personal(){
         $userModel = D('UserInfo'); 
-        $arr = $userModel->searchByid($_GET['id']);
+        $arr = $userModel->relation(true)->find($_GET['id']);
 
         $this->assign('vo',$arr['user']);
         $this->assign('weibo',$arr['weibos']);
@@ -69,7 +68,7 @@ class NewWeiboController extends BaseController {
 
 	public function detail(){
         $contentModel = D('TotalWeibo');
-        $arr = $contentModel->searchByid($_GET['id']);
+        $arr = $contentModel->relation(true)->find($_GET['id']);
         $this->assign('weibo',$arr);
     	$this->display();   
     }
