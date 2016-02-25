@@ -1,33 +1,33 @@
-
-<div class="content">
-    <volist name="weibo" id="vol">
+<extend name="public:header" />
+<block name="content">
+    <div class="content">
         <div>
             <header class="header">
                 <a href="#" ><img src="__PUBLIC__/img/sina.jpg" height="32" width="32"></a>
                 <div class="idcontent">
-                    <a href="__URL__/personal?id=<{$vol.uid}>" class="idname"><{$vol.uname}></a>
+                    <a href="__URL__/personal?id=<{$weibo.userid}>" class="idname"><{$weibo.user.username}></a>
                     <div class="idinfo">
-                        <p><{$vol.time}></p>
-                        <p><a href="#"><{$vol.datasource}></a></p>
+                        <p><{$weibo.time}></p>
+                        <p><a href="#"><{$weibo.datasource}></a></p>
                     </div>
                 </div>
             </header>
             <section class="contentsection">
-                <p class="text"><{$vol.content}></p>
+                <p class="text"><{$weibo.content}></p>
                 <div class="pic">
                     <ul>
-                        <li><{$vol.picturesource}></li>
+                        <li><{$weibo.picturesource}></li>
                     </ul>
                 </div>
             </section>
             <hr/>
             <footer class="footer">
                 <div class="footerdetail">
-                    <p class="p1">转发:<{$vol.number1}></p>
+                    <p class="p1">转发:<{$weibo.number1}></p>
                     <div style="width: 1.5px; height: 20px; background-color: #888"></div>
-                    <p class="p2">点赞:<{$vol.number2}></p>
+                    <p class="p2">点赞:<{$weibo.number2}></p>
                     <div style="width: 1.5px; height: 20px; background-color: #888"></div>
-                    <p class="p3">评论:<{$vol.number3}></p>
+                    <p class="p3">评论:<{$weibo.number3}></p>
                 </div>
                 <hr/>
                 <div class="allcomment">
@@ -54,6 +54,6 @@
             </footer>
         </div>
         <hr/>
-    </volist>
-</div>
+    </div>
 <link rel="stylesheet" href="__PUBLIC__/css/detail.css">
+</block>

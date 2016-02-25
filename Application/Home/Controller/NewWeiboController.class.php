@@ -18,90 +18,59 @@ class NewWeiboController extends BaseController {
     public function index(){
 
         $aWhatEverUser = D('UserInfo')->find();
-        $this->assign("user", $aWhatEverUser);
-        $totalWeiboWithUser = D('TotalWeibo')->relation(true)->select();
-        $this->assign("weibo", $totalWeiboWithUser);
+        $this->assign('user', $aWhatEverUser);
+        $totalWeiboWithUser = D('TotalWeibo')->relation(true)->find();
+        $this->assign('weibo', $totalWeiboWithUser);
         $this->display();
     }
 
     public function _empty($name){
 
-        $this->display("public:tpl");
-        echo "该方法为空";
+        $this->display('public:header');
+        echo '该方法为空';
     }
 
     public function search(){
+        if(isset($_GET['type']))
+        {
+            $type = $_GET['type'];
+            $arr_user = null; $arr_cont = null;
 
-    	$type = $_GET['type'];
-    	if($type == "3")
-    	{
-            // 同时搜索人与内容
-    		$m1 = new \Home\Model\NewWeiboUserModel();
-    		$arr1 = $m1->search();
-    		$this->assign("data",$arr1);
-    		// var_dump($arr1);
+            if ($type == 'both' || $type == 'id') {
+                $userModel = D('UserInfo'); 
+                $arr_user = $userModel->search($_GET['str']);
+            }
+            if ($type == 'both' || $type == 'cont') {
+                $contentModel = D('TotalWeibo');
+                $arr_cont = $contentModel->search($_GET['str']);
+            }
+            $this->assign('data', $arr_user); 
+            $this->assign('weibo', $arr_cont);
 
-    		$m2 = new \Home\Model\TotalWeiboModel();
-    		$arr2 = $m2->search();
-    		var_dump($arr2);
-    		$this->assign("weibo",$arr2);
-    		$content = $this->fetch('newWeibo:both');
+            $this->display();            
+        }
+        else
+        {
+            $this->display('public:header'); 
+        }
 
-    		$this->assign("content",$content);
-    	}
-
-    	if ($type == "1")
-    	{
-            // 仅搜索人
-    		$m1 = new \Home\Model\NewWeiboUserModel();
-    		$arr1 = $m1->search();
-    		$this->assign("data",$arr1);
-    		$content = $this->fetch('newWeibo:searchperson');
-    		$this->assign("content",$content);
-    		// var_dump($arr1);
-    	}
-    		
-    	if ($type == "2")
-    	{
-            // 仅搜索内容
-    		$m2 = new \Home\Model\TotalWeiboModel();
-    		$arr2 = $m2->search();
-    		$this->assign("weibo", $arr2);
-    		$content = $this->fetch('newWeibo:content');
-    		// var_dump($arr2);
-    		$this->assign("content",$content);
-    	}
-    		
-		$this->assign("content",$content);
-    	$this->display("public:tpl");
     }
 
     public function personal(){
-        $m1 = new \Home\Model\NewWeiboUserModel();
-        $arr1 = $m1->search2();
-        // print_r($arr1);
-        $this->assign("data",$arr1);
+        $userModel = D('UserInfo'); 
+        $arr = $userModel->relation(true)->find($_GET['id']);
 
-        $m2 = new \Home\Model\TotalWeiboModel();
-        $arr2 = $m2->find($arr1[0]['userid']);
-        //var_dump($arr2);
-        $this->assign("weibo",$arr2);
-        $content = $this->fetch('NewWeibo:personal');
+        $this->assign('vo',$arr['user']);
+        $this->assign('weibo',$arr['weibos']);
 
-		$this->assign("content",$content);
-    	$this->display("public:tpl");       
+        $this->display();  
     }
 
 	public function detail(){
-        //接收contentid,在comment中按照contentid查找
-        $m = new \Home\Model\TotalWeiboModel();
-        $arr = $m->search3();
-
-        $this->assign("weibo",$arr);
-
-        $content = $this->fetch('NewWeibo:detail');  //->fetch('Admin:index'
-		$this->assign("content",$content);
-    	$this->display("public:tpl");   
+        $contentModel = D('TotalWeibo');
+        $arr = $contentModel->relation(true)->find($_GET['id']);
+        $this->assign('weibo',$arr);
+    	$this->display();   
     }
 
     /*
@@ -111,7 +80,7 @@ class NewWeiboController extends BaseController {
         //get id  
         $ids = $_GET['id'];
         //echo $ids;
-        $n = split(";", $ids);
+        $n = split(';', $ids);
 
         $m1 = new \Home\Model\NewWeiboUserModel();
 
@@ -123,25 +92,26 @@ class NewWeiboController extends BaseController {
 
         $content = $this->fetch('NewWeibo:searchperson');
         $this->assign('content',$content);
-        $this->display("public:tpl");
+        $this->display('public:header');
     }
 
-    */
+    
     public function analysis_1()
     {
-        $m1 = new \Home\Model\NewWeiboAnalysisPersonModel();
-        $arr = $m1->analysis();
+        $m1 = D('TotalWeibo');
+        $arr = $m1->analysis_1($_GET['id']);
         
         $this->assign('hours',json_encode($arr[0]));
         $this->assign('weeks',json_encode($arr[1]));
-        $this->display("public:test");
+        $this->display('public:test');
     }
     public function analysis_2()
     {
-        $m1 = new \Home\Model\NewWeiboAnalysisTotalModel();
-        $arr = $m1->analysis();
+        $m1 = D('TotalWeibo');
+        $arr = $m1->analysis_2();
         $this->assign('hours',json_encode($arr[0]));
         $this->assign('weeks',json_encode($arr[1]));
-        $this->display("public:test");
+        $this->display('public:test');
     }
+    */
 }

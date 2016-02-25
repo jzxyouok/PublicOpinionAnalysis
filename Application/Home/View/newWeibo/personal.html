@@ -1,6 +1,8 @@
+<extend name="public:header" />
+<block name="content">
+
 <div class="all">
     <div class="id">
-        <volist name="data" id="vo">
             <div class="iditem">
                 <a href="#">
                     <div class="headimg">
@@ -17,10 +19,10 @@
                     </div>
                 </a>
             </div>
-        </volist>
     </div>
 
     <div class="content">
+    
         <volist name="weibo" id="vol">
             <div>
             <a href="__URL__/detail?id=<{$vol.id}>">
@@ -62,3 +64,5 @@
     </div>
 </div>
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/personal.css">
+
+</block>

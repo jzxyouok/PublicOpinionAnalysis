@@ -1,4 +1,4 @@
-﻿<extend name="public:tpl" />
+﻿<extend name="public:header" />
 <block name="content">
     <div class="every">
         <div class="all">
@@ -10,7 +10,7 @@
                         </div>
                         <div class="info">
                             <div class="i">
-                                <div class="uname"><a href="__URL__/personal?id=<{$vo.userid}>"><{$user.username}></a>></div>
+                                <div class="uname"><a href="__URL__/personal?id=<{$user.userid}>"><{$user.username}></a>></div>
                                 <div class="vip"><{$user.individualSignature}></div>
                             </div>
                             <div class="location"><{$user.location}></div>
@@ -23,37 +23,35 @@
                 </div>
                 <hr/>
             </div>
-
             <div class="content">
-                <volist name="weibo" id="vol">
                     <div>
                         <header class="header">
                             <a href="#" ><img src="__PUBLIC__/img/sina.jpg" height="32" width="32"></a>
                             <div class="idcontent">
-                                <a href="__URL__/personal?id=<{$vol.userid}>" class="idname"><{$vol.uname}></a>
+                                <a href="__URL__/personal?id=<{$weibo.userid}>" class="idname"><{$weibo.user.username}></a>
                                 <div class="idinfo">
-                                    <p><{$vol.time}></p>
-                                    <p><a href="<{$vol.datasource}>">信息源: <{$vol.datasource}></a></p>
+                                    <p><{$weibo.time}></p>
+                                    <p><a href="<{$weibo.datasource}>">信息源: <{$weibo.datasource}></a></p>
                                 </div>
                             </div>
                         </header>
-                        <section class="contentsection">
-                            <p class="text"><{$vol.content}></p>
-                            <div class="pic">
-                                <ul>
-                                    <li><{$vol.picturesource}></li>
-                                </ul>
-                            </div>
-                        </section>
+                       <a href="__URL__/detail?id=<{$weibo.id}>">
+                       <section class="contentsection">
+                           <p class="text"><{$weibo.content}></p>
+                           <div class="pic">
+                               <ul>
+                                   <li><{$weibo.picturesource}></li>
+                               </ul>
+                           </div>
+                       </section></a>
                         <hr/>
                         <footer class="footer">
-                            <p class="p1">转发:<{$vol.number1}></p>
-                            <p class="p2">点赞:<{$vol.number2}></p>
-                            <p class="p3">评论:<{$vol.number3}></p>
+                            <p class="p1">转发:<{$weibo.number1}></p>
+                            <p class="p2">点赞:<{$weibo.number2}></p>
+                            <p class="p3">评论:<{$weibo.number3}></p>
                         </footer>
                     </div>
                     <hr/>
-                </volist>
             </div>
         </div>
         <link rel="stylesheet" href="__PUBLIC__/css/weiboindex.css">
