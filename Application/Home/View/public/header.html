@@ -1,66 +1,119 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Index</title>
-    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">    
-<link rel="stylesheet" href="__PUBLIC__/css/index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="__PUBLIC__/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/flat-ui.css" rel="stylesheet">
+    <style type="text/css">
+       .navbar ,.navbar-inverse ,.navbar-embossed{
+           font-size: 13px;
+           min-height: 53px;
+           width: 120%;
+           margin-left: -9.9%;
+           margin-bottom: 30px;
+           border: none;
+           border-radius: 0px;
+           background-color: #C0392B;
+       }
 
+       .navbar-inverse .navbar-nav > .dropdown > a .caret {
+        border-top-color: white;
+        border-bottom-color: white;
+    }
+
+    .fake{
+      width: 5px;
+  }
+
+  .form ,.navbar-form ,.navbar-right{
+      width: 400px;
+  }
+
+  #navbarInput-01{
+   border-bottom-left-radius: 6px;
+   border-top-left-radius:6px;
+   width: 200px;
+}
+
+.navbar-form .input-group .form-control:first-child, .navbar-form .input-group-addon:first-child, .navbar-form .input-group-btn:first-child > .btn, .navbar-form .input-group-btn:first-child > .dropdown-toggle, .navbar-form .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .navbar-form .input-group .select2-search input[type="text"]:first-child {
+  border-radius: 0;
+}
+</style>
 </head>
-
 <body>
-
-<div class="navbar navbar-default" role="navigation">
-    　<div class="navbar-header">
-    　    <a href="__MODULE__/index" class="navbar-brand">主页</a>
-    　</div>
-    <ul class="nav navbar-nav">
-        <li class="dropdown">
-            <a href="##" data-toggle="dropdown" class="dropdown-toggle title">新浪微博<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="__MODULE__/NewWeibo/index">首页</a></li>
-                <li><a href="__MODULE__/NewWeibo/search">搜索</a></li>
-                <li><a href="__MODULE__/NewWeibo/personal">个人</a></li>
-                <li><a href="__MODULE__/NewWeibo/detail">详细</a></li>
+    <div class="container">
+      <div class="inav">
+        <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" href="__MODULE__/index">Public Opinion Analysis</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+          <ul class="nav navbar-nav navbar-left">
+              <li class="fake"><a href="#fakelink"></a></li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">微博 <b class="caret"></b></a>
+                  <span class="dropdown-arrow"></span>
+                  <ul class="dropdown-menu">
+                    <li><a href="__MODULE__/NewWeibo/index">Main</a></li>
+                    <li><a href="__MODULE__/NewWeibo/search">Search</a></li>
+                    <li class="divider"></li>
+                    <li><a href="__MODULE__/NewWeibo/personal">Personal</a></li>
+                    <li><a href="__MODULE__/NewWeibo/detail">Details</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">空间 <b class="caret"></b></a>
+              <span class="dropdown-arrow"></span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Main</a></li>
+                <li><a href="__MODULE__/qq">Search</a></li>
+                <li class="divider"></li>
+                <li><a href="__MODULE__/qq/personal">Personal</a></li>
+                <li><a href="__MODULE__/qq/detail">Details</a></li>
             </ul>
         </li>
         <li class="dropdown">
-            <a href="##" data-toggle="dropdown" class="dropdown-toggle title">QQ空间<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="__MODULE__/qq">搜索</a></li>
-                <li><a href="__MODULE__/qq/personal">个人</a></li>
-                <li><a href="__MODULE__/qq/detail">详细</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="##" data-toggle="dropdown" class="dropdown-toggle title">百度贴吧<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="__MODULE__/tieba/index">首页</a></li>
-                <li><a href="__MODULE__/tieba/search">搜索</a></li>
-                <li><a href="__MODULE__/tieba/personal">个人</a></li>
-                <li><a href="__MODULE__/tieba/detail">详细</a></li>
-            </ul>
-        </li>
-    </ul>
-
-<form action="__URL__/search" class="navbar-form navbar-left" rol="search" method="get">
+          <a href="##" class="dropdown-toggle" data-toggle="dropdown">贴吧 <b class="caret"></b></a>
+          <span class="dropdown-arrow"></span>
+          <ul class="dropdown-menu">
+            <li><a href="__MODULE__/tieba/index">Main</a></li>
+            <li><a href="__MODULE__/tieba/search">Search</a></li>
+            <li class="divider"></li>
+            <li><a href="__MODULE__/tieba/personal">Personal</a></li>
+            <li><a href="__MODULE__/tieba/detail">Details</a></li>
+        </ul>
+    </li>
+</ul>
+<form class="form navbar-form navbar-right" action="__URL__/search" role="search" method="get">
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="请输入关键词" name = "str"/>
-        <select class="select" name="type">
+      <div class="input-group">
+        <input class="form-control" id="navbarInput-01"  placeholder="Search" type="text" placeholder="请输入关键词" name = "str"/>
+        <span class="input-group-btn" id="input-group">
+          <select class="form-control select-form" name = "type">
             <option class="id" value="id">ID</option>
             <option class="content" value="cont">Content</option>
             <option class="both" value="both">Both</option>
         </select>
-    </div>
-    <button type="submit" class="btn btn-default">搜索</button>
+      </select>
+      <button type="submit" class="btn"><span class="fui-search"></span></button>
+  </span>
+</div>
+</div>
 </form>
 </div>
-<script src="__PUBLIC__/js/jquery.js"></script>
-<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+</nav>
+</div>   
+</div>
 
+<script src="__PUBLIC__/js/vendor/jquery.min.js"></script>
+<script src="__PUBLIC__/js/vendor/video.js"></script>
+<script src="__PUBLIC__/js/flat-ui.min.js"></script>
 
-<block name="content">
-
+ <block name="content">
 </block>
 
 </body>

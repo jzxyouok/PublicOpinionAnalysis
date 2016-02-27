@@ -1,5 +1,6 @@
 <?php
 namespace Home\Controller;
+use Think\Model\RelationModel;
 
 class NewWeiboController extends BaseController {
     /**
@@ -19,7 +20,8 @@ class NewWeiboController extends BaseController {
 
         $aWhatEverUser = D('UserInfo')->find();
         $this->assign('user', $aWhatEverUser);
-        $totalWeiboWithUser = D('TotalWeibo')->relation(true)->find();
+	$weiboModel = D("TotalWeibo");
+        $totalWeiboWithUser =  $weiboModel->relation(true)->find();
         $this->assign('weibo', $totalWeiboWithUser);
         $this->display();
     }
@@ -66,7 +68,7 @@ class NewWeiboController extends BaseController {
         $this->display();  
     }
 
-	public function detail(){
+    public function detail(){
         $contentModel = D('TotalWeibo');
         $arr = $contentModel->relation(true)->find($_GET['id']);
         $this->assign('weibo',$arr);

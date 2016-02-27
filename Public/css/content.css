@@ -12,58 +12,71 @@ a:hover{
     color: #555;
 }
 
-.content{
-    border: 1px #666 solid;
+.weibo-content .head-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: 14px;
+}
+
+.ul-user-info li{
+    display: inline;
+}
+
+.personal-left .btn-group2{
+    margin: 0px -20px;
+    padding: 0 auto;
+}
+
+.personal-left .btn-group2 .btn{
+    width: 295.32px;
     height: auto;
-    background-color: #ffffff;
-    border-radius: 2px;
-    margin: auto 150px;
+    text-align: left;
 }
 
-hr{
-    margin-bottom: 0px;
-    margin-top: 0px;
-    background-color: #888;
-    height: 1px;
+.weibo-index{
+    border: 2px solid #27AE60;
+    margin-top: 10px;
+    width: 909px;
+    padding-bottom: 0px;
+    background-color: white;
 }
 
-.idcontent .idname{
-    font-size: 14px;
+.weibo-index .btn-group3{
+    margin-left: 0px;
 }
 
-.idcontent .idinfo{
-    display: flex;
-    flex-direction: row;
-    font-size: 8px;
-    color: #3c3c3c;
+.weibo-index .btn-group3 .btn{
+    width: 301.6px;
+    border-radius: 0px;
 }
 
-.header{
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
+.weibo-index p{
+    padding: 15px;
+    font-size: 16px;
+    text-align: left;
 }
 
-.contentsection{
-    padding-left: 20px;
-}
-
-.contentsection ul li{
-    display: inline-block;
-}
-
-.footer{
-    padding-top: 10px;
-    display: flex;
-    flex-direction: row;
+.weibo-index .pictures{
     text-align: center;
-    font-size: 10px;
+    margin: -30px auto;
 }
 
-.p1, .p2, .p3{
-    flex:1;
-    -webkit-flex: 1;
-    padding: 10px auto;
+.row {
+    margin: 0px 15px;
+}
+
+.weibo-index .pic{
+    margin: 10px 0px;
+    padding: 0px;
+}
+
+.user-name{
+    padding-top: 15px;
+}
+
+.user-info{
+    padding-bottom: 0px;
 }
 
 

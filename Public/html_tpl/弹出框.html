@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>弹出框</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
+<link href="css/flat-ui.css" rel="stylesheet" /> 
+<style type="text/css">
+#close{ 
+	background:url(img/close.png) no-repeat; 
+	width:30px; 
+	height:30px; 
+	cursor:pointer; 
+	position:absolute; 
+	right:5px; 
+	top:15px; 
+	text-indent:-999em;
+	}
+#mask{ 
+	background-color:#ccc;
+	opacity:0.5;
+	filter: alpha(opacity=50); 
+	position:absolute; 
+	left:0;
+	top:0;
+	z-index:1000;
+	}
+#search{ 
+	position:fixed;
+	z-index:1001;
+	}
+.searchCon{ 
+	position:relative; 
+	width:670px;
+	height:380px;
+	background: #2A2C2E center center no-repeat;
+	}
+</style>
+<link type="text/css" rel="stylesheet" href="style/main.css" />
+<script>
+function openNew(){
+	var sWidth=document.body.scrollWidth;
+	var sHeight=document.body.scrollHeight;
+	
+	var wHeight=document.documentElement.clientHeight;
+	
+	var oMask=document.createElement("div");
+		oMask.id="mask";
+		oMask.style.height=sHeight+"px";
+		oMask.style.width=sWidth+"px";
+		document.body.appendChild(oMask);
+	var osearch=document.createElement("div");
+		osearch.id="search";
+		osearch.innerHTML="<div class='searchCon'><div id='close'>点击关闭</div></div>";
+		document.body.appendChild(osearch);
+
+	var dHeight=osearch.offsetHeight;
+	var dWidth=osearch.offsetWidth;
+
+		osearch.style.left=sWidth/2-dWidth/2+"px";
+		osearch.style.top=wHeight/2-dHeight/2+"px";
+
+	var oClose=document.getElementById("close");
+	
+		oClose.onclick=oMask.onclick=function(){
+					document.body.removeChild(osearch);
+					document.body.removeChild(oMask);
+					};
+					};
+					
+	window.onload=function(){
+			var oBtn=document.getElementById("btnsearch");
+				oBtn.onclick=function(){
+					openNew();
+					return false;
+					}
+				
+		}
+</script>
+</head>
+<body>
+  <div class="container">
+      <button id="btnsearch" hidefocus="true" class="search-btn btn btn-block btn-lg btn-primary">查询</button>
+  </div>
+</body>
+</html>

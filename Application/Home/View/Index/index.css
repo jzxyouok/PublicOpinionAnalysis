@@ -1,0 +1,194 @@
+.navbar ,.navbar-inverse ,.navbar-embossed, #all-carousel
+  {
+    font-size: 13px;
+    min-height: 53px;
+    width: 120%;
+    margin-left: -9.9%;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 0px;
+    background-color: #C0392B;
+  }
+
+  .navbar-inverse .navbar-nav > .dropdown > a .caret
+  {
+    border-top-color: white;
+    border-bottom-color: white;
+  }
+
+  .fake
+  {
+    width: 5px;
+  }
+
+  .form ,.navbar-form ,.navbar-right
+  {
+    width: 400px;
+  }
+
+  #navbarInput-01
+  {
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    width: 200px;
+  }
+
+  .inav
+  {
+    margin-bottom: -30px;
+  }
+
+  .navbar-form .input-group .form-control:first-child, .navbar-form .input-group-addon:first-child, .navbar-form .input-group-btn:first-child > .btn, .navbar-form .input-group-btn:first-child > .dropdown-toggle, .navbar-form .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .navbar-form .input-group .select2-search input[type="text"]:first-child
+  {
+    border-radius: 0;
+  }
+
+  body
+  {
+    margin: 0 auto;
+    color: #5a5a5a;
+    font-family: "Microsoft Yahei";
+  }
+
+  h1, h2, h3
+  {
+    margin-top: 0px;
+    margin-bottom: 36px;
+  }
+
+  a .btn ,.btn-block ,.btn-lg
+  {
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .carousel
+  {
+    height: 500px;
+    margin-bottom: 60px;
+  }
+
+  .carousel .item
+  {
+    height: 500px;
+    background-color: #000;
+  }
+
+  .carousel .item #icon-img
+  {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+
+  .carousel-caption
+  {
+    z-index: 10;
+  }
+
+  .carousel-caption p
+  {
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  .summary
+  {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .summary .col-md-4
+  {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .img-circle
+  {
+    width: 100%;
+    height: 100%;
+  }
+
+  .feature-divider
+  {
+    margin: 40px 0;
+  }
+
+  .feature
+  {
+    padding: 30px 0;
+  }
+
+  .feature-heading
+  {
+    font-size: 50px;
+    color: #2a6496;
+  }
+
+  .feature-heading .text-muted
+  {
+    font-size: 28px;
+  }
+
+  @media (max-width: 768px)
+  {
+
+    .summary
+    {
+      padding-right: 3px;
+      padding-left: 3px;
+    }
+
+    .carousel
+    {
+      height: 300px;
+      margin-bottom: 30px;
+    }
+
+    .carousel .item
+    {
+      height: 300px;
+    }
+
+    .carousel img
+    {
+      min-height: 300px;
+    }
+
+    .carousel-caption p
+    {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .feature-heading
+    {
+      font-size: 34px;
+    }
+
+    .feature-heading .text-muted
+    {
+      font-size: 22px;
+    }
+  }
+
+  @media (min-width: 992px)
+  {
+    .feature-heading
+    {
+      margin-top: 5px;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3,.h4, .h5, .h6,
+  {
+    font-family: Microsoft Yahei;
+    font-weight: 300;
+    line-height: 1.1;
+    color: inherit;
+    font-size: 30px;
+  }
+
