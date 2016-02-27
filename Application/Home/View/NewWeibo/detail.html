@@ -1,59 +1,127 @@
 <extend name="public:header" />
 <block name="content">
-    <div class="content">
-        <div>
-            <header class="header">
-                <a href="#" ><img src="__PUBLIC__/img/sina.jpg" height="32" width="32"></a>
-                <div class="idcontent">
-                    <a href="__URL__/personal?id=<{$weibo.userid}>" class="idname"><{$weibo.user.username}></a>
-                    <div class="idinfo">
-                        <p><{$weibo.time}></p>
-                        <p><a href="#"><{$weibo.datasource}></a></p>
+    
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
+    <link href="css/flat-ui.css" rel="stylesheet" />    
+    <style type="text/css">
+        .weibo-content .head-img{
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            margin-top: 14px;
+        }
+
+        .ul-user-info li{
+            display: inline;
+        }
+
+        .personal-left .btn-group2{
+            margin: 0px -20px;
+            padding: 0 auto;
+        }
+
+        .personal-left .btn-group2 .btn{
+            width: 295.32px;
+            height: auto;
+            text-align: left;
+        }
+
+        .weibo-index{
+            border: 2px solid #27AE60;
+            margin-top: 10px;
+            width: 909px;
+            padding-bottom: 0px;
+            background-color: white;
+        }
+
+        .weibo-index .btn-group3{
+            margin-left: 0px;
+        }
+
+        .weibo-index .btn-group3 .btn{
+            width: 301.6px;
+            border-radius: 0px;
+        }
+
+        .weibo-index p{
+            padding: 15px;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .weibo-index .pictures{
+            text-align: center;
+            margin: -30px auto;
+        }
+
+        .row {
+            margin: 0px 15px;
+        }
+
+        .weibo-index .pic{
+            margin: 10px 0px;
+            padding: 0px;
+        }
+
+        .user-name{
+            padding-top: 15px;
+        }
+
+        .user-info{
+            padding-bottom: 0px;
+        }
+    </style>
+
+<body>
+     <div class="weibos">
+        <div class="weibo-content">
+            <div class="weibo-index">
+                <div class="info">
+                    <div class="col-md-1">
+                        <a href="##">
+                            <img class="head-img"  src="__PUBLIC__/img/sina.jpg" height="32" width="32" />
+                        </a>
+                    </div>
+                    <div class="col-md-11">
+                        <div class="user-name user-about">
+                            <a href="__URL__/personal?id=<{$weibo.userid}>"><{$weibo.user.username}></a>
+                        </div>
+                        <div class="user-info user-about"> 
+                            <ul class="ul-user-info">
+                                <li><a href="#"><{$weibo.time}></a></li>
+                                <li>From:</li>
+                                <li><a href="#"><{$weibo.datasource}></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </header>
-            <section class="contentsection">
-                <p class="text"><{$weibo.content}></p>
-                <div class="pic">
-                    <ul>
-                        <li><{$weibo.picturesource}></li>
-                    </ul>
+                <div class="content">
+                    <p>
+                        <{$weibo.content}>
+                    </p>
                 </div>
-            </section>
-            <hr/>
-            <footer class="footer">
-                <div class="footerdetail">
-                    <p class="p1">转发:<{$weibo.number1}></p>
-                    <div style="width: 1.5px; height: 20px; background-color: #888"></div>
-                    <p class="p2">点赞:<{$weibo.number2}></p>
-                    <div style="width: 1.5px; height: 20px; background-color: #888"></div>
-                    <p class="p3">评论:<{$weibo.number3}></p>
-                </div>
-                <hr/>
-                <div class="allcomment">
-                    <volist name="comment" id="cmt">
-                        <div class="comment">
-                            <header class="comheader">
-                                <div class="comdetail">
-                                    <a href="#" ><img src="__PUBLIC__/img/sina.jpg" height="20" width="20"></a>
-                                    <div class="comname">
-                                        <a href="__URL__/personal?id=<{$cmt.uid}>" class="name"><{$cmt.uname}></a>
-                                        <p>:<{$cmt.content}></p>
-                                    </div>
-                                </div>
-                            </header>
-                            <footer class="comfooter">
-                                <div class="idinfo">
-                                    <p><{$cmt.time}></p>
-                                </div>
-                            </footer>
+                <div class="pictures">
+                    <div class="row">
+                        <div class="pic col-xs-5 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="<{$weibo.picturesource}>" alt="NULL" />
+                            </a>
                         </div>
-                        <hr/>
-                    </volist>
+                    </div>
                 </div>
-            </footer>
+                <div class="btn-group btn-group3">
+                    <a class="btn btn-primary" href="#"><strong class="W_f12"><{$weibo.number1}></strong><span class="S_txt2">转发</span></a>
+                    <a class="btn btn-primary" href="#"><strong class="W_f12"><{$weibo.number2}></strong><span class="S_txt2">评论</span></a>
+                    <a class="btn btn-primary" href="#"><strong class="W_f12"><{$weibo.number3}></strong><span class="fui-heart"></span></a>
+                </div> 
+            </div>
         </div>
-        <hr/>
     </div>
-<link rel="stylesheet" href="__PUBLIC__/css/detail.css">
+        <hr/>
+    <script src="js/vendor/jquery.min.js"></script> 
+    <script src="js/vendor/video.js"></script>
+    <script src="js/flat-ui.min.js"></script> 
+</body>
 </block>
