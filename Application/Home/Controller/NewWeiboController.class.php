@@ -62,7 +62,8 @@ class NewWeiboController extends BaseController {
         $userModel = D('UserInfo'); 
         $arr = $userModel->relation(true)->find($_GET['id']);
 
-        $this->assign('vo',$arr['user']);
+        $this->assign('user',$arr);
+        // var_dump($arr);
         $this->assign('weibo',$arr['weibos']);
 
         $this->display();  

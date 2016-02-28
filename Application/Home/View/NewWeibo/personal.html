@@ -1,68 +1,153 @@
 <extend name="public:header" />
 <block name="content">
 
-<div class="all">
-    <div class="id">
-            <div class="iditem">
-                <a href="#">
-                    <div class="headimg">
-                        <a href="#"><img src="__PUBLIC__/img/sina.jpg" width="100" height="100"></a>
-                    </div>
-                    <div class="info">
-                        <div class="uname"><a href="#"><{$vo.username}></a></div>
-                        <div class="i">
-                            <p class="vip">V：<{$vo.vip}></p>
-                            <p class="location"><{$vo.location}></p>
-                            <p class="fanscount"><a href="__URL__/getFans?id=<{$vo.fans}>">粉丝：<{$vo.number2}></a></p>
-                            <p class="attentioncount">微博：<{$vo.number3}></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-    </div>
+<head>
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
+    <link href="css/flat-ui.css" rel="stylesheet" /> 
+    <style type="text/css">
+        body{
+            background-color: #ECF0F1;
+        }
 
-    <div class="content">
-    
-        <volist name="weibo" id="vol">
+        .container-personal{
+            margin: auto 240px;
+            text-align: center;
+        }
+
+        .head{
+            border:1px solid #000000;
+        }
+
+        .personal-left .btn-group1{
+            margin: 10px -20px;
+            padding: 0 auto;
+        }
+
+        .personal-left .btn-group1 .btn{
+            width: 98.44px;
+        }
+
+        .personal-left .btn-group2{
+            margin: 0px -20px;
+            padding: 0 auto;
+        }
+
+        .personal-left .btn-group2 .btn{
+            width: 295.32px;
+            height: auto;
+            text-align: left;
+        }
+
+        .weibo-index{
+            border: 2px solid #27AE60;
+            margin-top: 10px;
+            width: 559.328px;
+            padding-bottom: 0px;
+            background-color: white;
+        }
+
+        .weibo-index .btn-group3{
+            margin-left: 0px;
+        }
+
+        .weibo-index .btn-group3 .btn{
+            width: 185.104px;
+            border-radius: 0px;
+        }
+
+        .weibo-index p{
+            padding: 15px;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .weibo-index .pictures{
+            text-align: center;
+            margin: -30px auto;
+        }
+
+        .row {
+            margin: 0px 15px;
+        }
+
+        .weibo-index .pic{
+            margin: 10px 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<div class="container-personal">
+        <div class="head">
             <div>
-            <a href="__URL__/detail?id=<{$vol.id}>">
-                <section class="contentsection">
-                    <p class="text"><{$vol.content}></p>
-                    <div class="pic">
-                        <ul>
-                            <!-- <li><{$vol.resourceurl}></li> -->
-                            
- <!--                            <?php 
-                               $img =split(";", $vol['picturesource']);
-                               //var_dump($img);
-                               foreach ($img as $key => $value) {
-                                   echo "<li><img src=".$value."></li>";
-                               }
-                            ?> -->
+                <a href="##">
+                    <img class="head-img" src="__PUBLIC__/img/sina.jpg" width="100" height="100">
+                </a>
+                <a href="##">
+                    <p><{$user.username}></p>
+                </a>
+                <p><{$user.individualsignature}></p>
+            </div>
+        </div>
+        <div class="col-md-4 personal-left">
+            <div class="btn-group btn-group1">
+                <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><{$user.number2}></strong><br/><span class="S_txt2">关注</span></a>
+                <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><{$user.number3}></strong><br/><span class="S_txt2">粉丝</span></a>
+                <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><{$user.number4}></strong><br/><span class="S_txt2">微博</span></a>
+            </div> 
+            <div class="btn-group-vertical btn-group2" role="group">
+                <a class="btn btn-primary" href="#fakelink"><span class="fui-location">地址：<{$user.location}></span></a>
+                <a class="btn btn-primary" href="#fakelink"><span class="fui-yelp">简介：<{$user.otherinfo}></span></a>
+                <a class="btn btn-primary" href="#fakelink"><span class="fui-link">注册时间：<{$user.time}></span></a>
+                <a class="btn btn-primary" href="#fakelink"><span class="fui-tag">性别：<{$user.sex}></span></a>
+            </div>
+        </div>
 
-                            <!-- <li><img src="<{$vol.resourceurl}>"></li> -->
-                        </ul>
+        <volist name="weibo" id="vol">
+            <div class="col-md-9 personal-left">
+                <div class="weibo-index">
+                    <div class="info">                        
                     </div>
-                    <div class="idcontent">
-                        <div class="idinfo">
-                            <p><{$vol.time}></p>
-                            <p><a href="#"><{$vol.datasource}></a></p>
+                    <div class="user-info user-about">                           
+                        <p>
+                        Time:<{$vol.time}>,
+                        From: <a href="<{$weibo.datasource}>"><{$vol.datasource}></a>
+                        </p>
+                    </div>
+                    <hr/>
+
+                    <div class="content">
+                        <p>
+                            <{$vol.content}>
+                        </p>
+                    </div>
+                    <div class="pictures">
+                    <div class="row">
+                        <div class="pic col-xs-5 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="<{$weibo.picturesource}>" alt="NULL" />
+                            </a>
                         </div>
                     </div>
-                </section></a>
-                <hr/>
-                <footer class="footer">
-                    <p class="p1">转发:<{$vol.number1}></p>
-                    <div style="width: 1.5px; height: 30px; background-color: #888"></div>
-                    <p class="p2">点赞:<{$vol.number2}></p>
-                    <div style="width: 1.5px; height: 30px; background-color: #888"></div>
-                    <p class="p3">评论:<{$vol.number3}></p>
-                </footer>
+                </div>
+                    <div class="btn-group btn-group3">
+                        <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><{$vol.number1}></strong><span class="S_txt2">转发</span></a>
+                        <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><{$vol.number2}></strong><span class="S_txt2">评论</span></a>
+                        <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><{$vol.number3}></strong><span class="fui-heart"></span></a>
+                    </div> 
+                </div>
             </div>
-            <hr/>
-        </volist>
+        </volist>        
     </div>
-</div>
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/personal.css">
+
+<br>
+<hr/>
+
+
+<script src="js/vendor/jquery.min.js"></script> 
+    <script src="js/vendor/video.js"></script>
+    <script src="js/flat-ui.min.js"></script>
 
 </block>
