@@ -2,8 +2,9 @@
 <block name="content">
 
 
-
-<div class="all">
+<include file="person1"/>
+<include file="content"/>
+<!-- <div class="all">
 
 <present name = "data">
     <div class="id" id="id">
@@ -26,7 +27,6 @@
                                 <p class="space"></p>
                             </div>
                             <div class="line2">
-                                <!-- 此处的数字暂时未猜测的 -->
                                 <p class="attentioncount">关注:<{$vo.number1}></p>
                                 <p class="fanscount"><a href="__URL__/getFans?id=<{$vo.fans}>">粉丝：<{$vo.number2}></a></p>
                                 <p class="weibocount">微博:<{$vo.number3}></p>
@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/id.css">
     </notpresent>
 </present>
-<present name ="weibo">
+<present name ="weibos">
   <div class="content">
    <volist name="weibo" id="vol">
        <div>
@@ -87,6 +87,6 @@
 
 </present>
 
-</div>
+</div> -->
 
 </block>

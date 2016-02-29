@@ -47,8 +47,9 @@ class NewWeiboController extends BaseController {
                 $arr_cont = $contentModel->search($_GET['str']);
             }
             $this->assign('data', $arr_user); 
-            $this->assign('weibo', $arr_cont);
-
+            $this->assign('weibos', $arr_cont);
+            // var_dump($arr_user);
+            // var_dump($arr_cont);
             $this->display();            
         }
         else
@@ -64,7 +65,7 @@ class NewWeiboController extends BaseController {
 
         $this->assign('user',$arr);
         // var_dump($arr);
-        $this->assign('weibo',$arr['weibos']);
+        $this->assign('weibos',$arr['weibos']);
 
         $this->display();  
     }
@@ -72,7 +73,8 @@ class NewWeiboController extends BaseController {
     public function detail(){
         $contentModel = D('TotalWeibo');
         $arr = $contentModel->relation(true)->find($_GET['id']);
-        $this->assign('weibo',$arr);
+        $arr = array("1"=>$arr);
+        $this->assign('weibos',$arr);
     	$this->display();   
     }
 
