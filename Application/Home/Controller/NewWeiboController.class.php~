@@ -73,7 +73,7 @@ class NewWeiboController extends BaseController {
 	//var_dump($analysis);
         $this->assign('hours',json_encode($analysis[0]));
         $this->assign('weeks',json_encode($analysis[1]));
-	$this->assign('username',json_encode($arr['username']));
+	$this->assign('username',$arr['username']);
         $this->assign('user',$arr);
         // var_dump($arr);
         $this->assign('weibos',$arr['weibos']);

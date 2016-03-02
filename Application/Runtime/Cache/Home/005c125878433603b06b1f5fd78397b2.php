@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/PublicOpinionAnalysis/Public/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/PublicOpinionAnalysis/Public/css/flat-ui.css" rel="stylesheet">
+    <link href="/thinkphp/Public/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/thinkphp/Public/css/flat-ui.css" rel="stylesheet">
     <style type="text/css">
        .navbar ,.navbar-inverse ,.navbar-embossed{
            font-size: 13px;
@@ -49,7 +49,7 @@
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
                 <span class="sr-only">Toggle navigation</span>
             </button>
-            <a class="navbar-brand" href="/PublicOpinionAnalysis/index.php/Home/index">Public Opinion Analysis</a>
+            <a class="navbar-brand" href="/thinkphp/index.php/Home/index">Public Opinion Analysis</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-01">
           <ul class="nav navbar-nav navbar-left">
@@ -58,11 +58,11 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">微博 <b class="caret"></b></a>
                   <span class="dropdown-arrow"></span>
                   <ul class="dropdown-menu">
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/index">Main</a></li>
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/search">Search</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/index">Main</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/search">Search</a></li>
                     <li class="divider"></li>
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/personal">Personal</a></li>
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/detail">Details</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/personal">Personal</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/detail">Details</a></li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -70,25 +70,25 @@
               <span class="dropdown-arrow"></span>
               <ul class="dropdown-menu">
                 <li><a href="#">Main</a></li>
-                <li><a href="/PublicOpinionAnalysis/index.php/Home/qq">Search</a></li>
+                <li><a href="/thinkphp/index.php/Home/qq">Search</a></li>
                 <li class="divider"></li>
-                <li><a href="/PublicOpinionAnalysis/index.php/Home/qq/personal">Personal</a></li>
-                <li><a href="/PublicOpinionAnalysis/index.php/Home/qq/detail">Details</a></li>
+                <li><a href="/thinkphp/index.php/Home/qq/personal">Personal</a></li>
+                <li><a href="/thinkphp/index.php/Home/qq/detail">Details</a></li>
             </ul>
         </li>
         <li class="dropdown">
           <a href="##" class="dropdown-toggle" data-toggle="dropdown">贴吧 <b class="caret"></b></a>
           <span class="dropdown-arrow"></span>
           <ul class="dropdown-menu">
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/index">Main</a></li>
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/search">Search</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/index">Main</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/search">Search</a></li>
             <li class="divider"></li>
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/personal">Personal</a></li>
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/detail">Details</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/personal">Personal</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/detail">Details</a></li>
         </ul>
     </li>
 </ul>
-<form class="form navbar-form navbar-right" action="/PublicOpinionAnalysis/index.php/Home/NewWeibo/search" role="search" method="get">
+<form class="form navbar-form navbar-right" action="/thinkphp/index.php/Home/NewWeibo/search" role="search" method="get">
     <div class="form-group">
       <div class="input-group">
         <input class="form-control" id="navbarInput-01"  placeholder="Search" type="text" placeholder="请输入关键词" name = "str"/>
@@ -109,9 +109,9 @@
 </div>   
 </div>
 
-<script src="/PublicOpinionAnalysis/Public/js/vendor/jquery.min.js"></script>
-<script src="/PublicOpinionAnalysis/Public/js/vendor/video.js"></script>
-<script src="/PublicOpinionAnalysis/Public/js/flat-ui.min.js"></script>
+<script src="/thinkphp/Public/js/vendor/jquery.min.js"></script>
+<script src="/thinkphp/Public/js/vendor/video.js"></script>
+<script src="/thinkphp/Public/js/flat-ui.min.js"></script>
 
  
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/PublicOpinionAnalysis/Public/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/PublicOpinionAnalysis/Public/css/flat-ui.css" rel="stylesheet">
+    <link href="/thinkphp/Public/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/thinkphp/Public/css/flat-ui.css" rel="stylesheet">
     <style type="text/css">
        .navbar ,.navbar-inverse ,.navbar-embossed{
            font-size: 13px;
@@ -49,7 +49,7 @@
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
                 <span class="sr-only">Toggle navigation</span>
             </button>
-            <a class="navbar-brand" href="/PublicOpinionAnalysis/index.php/Home/index">Public Opinion Analysis</a>
+            <a class="navbar-brand" href="/thinkphp/index.php/Home/index">Public Opinion Analysis</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-01">
           <ul class="nav navbar-nav navbar-left">
@@ -58,11 +58,11 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">微博 <b class="caret"></b></a>
                   <span class="dropdown-arrow"></span>
                   <ul class="dropdown-menu">
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/index">Main</a></li>
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/search">Search</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/index">Main</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/search">Search</a></li>
                     <li class="divider"></li>
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/personal">Personal</a></li>
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/detail">Details</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/personal">Personal</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/detail">Details</a></li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -70,25 +70,25 @@
               <span class="dropdown-arrow"></span>
               <ul class="dropdown-menu">
                 <li><a href="#">Main</a></li>
-                <li><a href="/PublicOpinionAnalysis/index.php/Home/qq">Search</a></li>
+                <li><a href="/thinkphp/index.php/Home/qq">Search</a></li>
                 <li class="divider"></li>
-                <li><a href="/PublicOpinionAnalysis/index.php/Home/qq/personal">Personal</a></li>
-                <li><a href="/PublicOpinionAnalysis/index.php/Home/qq/detail">Details</a></li>
+                <li><a href="/thinkphp/index.php/Home/qq/personal">Personal</a></li>
+                <li><a href="/thinkphp/index.php/Home/qq/detail">Details</a></li>
             </ul>
         </li>
         <li class="dropdown">
           <a href="##" class="dropdown-toggle" data-toggle="dropdown">贴吧 <b class="caret"></b></a>
           <span class="dropdown-arrow"></span>
           <ul class="dropdown-menu">
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/index">Main</a></li>
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/search">Search</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/index">Main</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/search">Search</a></li>
             <li class="divider"></li>
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/personal">Personal</a></li>
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/detail">Details</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/personal">Personal</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/detail">Details</a></li>
         </ul>
     </li>
 </ul>
-<form class="form navbar-form navbar-right" action="/PublicOpinionAnalysis/index.php/Home/NewWeibo/search" role="search" method="get">
+<form class="form navbar-form navbar-right" action="/thinkphp/index.php/Home/NewWeibo/search" role="search" method="get">
     <div class="form-group">
       <div class="input-group">
         <input class="form-control" id="navbarInput-01"  placeholder="Search" type="text" placeholder="请输入关键词" name = "str"/>
@@ -109,9 +109,9 @@
 </div>   
 </div>
 
-<script src="/PublicOpinionAnalysis/Public/js/vendor/jquery.min.js"></script>
-<script src="/PublicOpinionAnalysis/Public/js/vendor/video.js"></script>
-<script src="/PublicOpinionAnalysis/Public/js/flat-ui.min.js"></script>
+<script src="/thinkphp/Public/js/vendor/jquery.min.js"></script>
+<script src="/thinkphp/Public/js/vendor/video.js"></script>
+<script src="/thinkphp/Public/js/flat-ui.min.js"></script>
 
  
 
@@ -191,13 +191,98 @@
             padding: 0px;
         }
     </style>
-</head>
 
-<div class="container-personal">
+
+</head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+
+		<script src="/thinkphp/Public/js/jquery.js"></script>
+		<style type="text/css">
+${demo.css}
+		</style>
+		<script type="text/javascript">
+$(function () {
+    $('#week').highcharts({
+        title: {
+            text:<?php echo ($username); ?>+'的每周微博分析',
+            x: -20 //center
+        },
+        xAxis: {
+            categories: ['Mon' , "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        },
+        yAxis: {
+            title: {
+                text: '数量 (个)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '个'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'user',
+            data: <?php echo ($weeks); ?>
+        }]
+    });
+    $('#day').highcharts({
+        title: {
+            text:<?php echo ($username); ?>+'的每月微博分析',
+            x: -20 //center
+        },
+        xAxis: {
+            categories: ['0',"1", "2", "3", "4", "5", "6",'7',"8", "9", "10", "11", "12", "13",'14',"15", "16", "17", "18", "19", "20",'21',"22", "23"]
+        },
+        yAxis: {
+            title: {
+                text: '数量 (个)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '个'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: <?php echo ($username); ?>,
+            data: <?php echo ($hours); ?>
+        }]
+    });
+
+
+});
+		</script>
+
+
+	</head>
+
+
+
+<div class="container-personal">	
         <div class="head">
             <div>
                 <a href="##">
-                    <img class="head-img" src="/PublicOpinionAnalysis/Public/img/sina.jpg" width="100" height="100">
+                    <img class="head-img" src="/thinkphp/Public/img/sina.jpg" width="100" height="100">
                 </a>
                 <a href="##">
                     <p><?php echo ($user["username"]); ?></p>
@@ -205,53 +290,12 @@
                 <p><?php echo ($user["individualsignature"]); ?></p>
             </div>
         </div>
-        <div class="col-md-4 personal-left">
-            <div class="btn-group btn-group1">
-                <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><?php echo ($user["number2"]); ?></strong><br/><span class="S_txt2">关注</span></a>
-                <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><?php echo ($user["number3"]); ?></strong><br/><span class="S_txt2">粉丝</span></a>
-                <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><?php echo ($user["number4"]); ?></strong><br/><span class="S_txt2">微博</span></a>
-            </div> 
-            <div class="btn-group-vertical btn-group2" role="group">
-                <a class="btn btn-primary" href="#fakelink"><span class="fui-location">地址：<?php echo ($user["location"]); ?></span></a>
-                <a class="btn btn-primary" href="#fakelink"><span class="fui-yelp">简介：<?php echo ($user["otherinfo"]); ?></span></a>
-                <a class="btn btn-primary" href="#fakelink"><span class="fui-link">注册时间：<?php echo ($user["time"]); ?></span></a>
-                <a class="btn btn-primary" href="#fakelink"><span class="fui-tag">性别：<?php echo ($user["sex"]); ?></span></a>
-            </div>
-        </div>
-
-       <!--  <?php if(is_array($weibo)): $i = 0; $__LIST__ = $weibo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><div class="col-md-9 personal-left">
-                <div class="weibo-index">
-                    <div class="info">                        
-                    </div>
-                    <div class="user-info user-about">                           
-                        <p>
-                        Time:<?php echo ($vol["time"]); ?>,
-                        From: <a href="<?php echo ($weibo["datasource"]); ?>"><?php echo ($vol["datasource"]); ?></a>
-                        </p>
-                    </div>
-                    <hr/>
-
-                    <div class="content">
-                        <p>
-                            <?php echo ($vol["content"]); ?>
-                        </p>
-                    </div>
-                    <div class="pictures">
-                    <div class="row">
-                        <div class="pic col-xs-5 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img src="<?php echo ($weibo["picturesource"]); ?>" alt="NULL" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                    <div class="btn-group btn-group3">
-                        <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><?php echo ($vol["number1"]); ?></strong><span class="S_txt2">转发</span></a>
-                        <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><?php echo ($vol["number2"]); ?></strong><span class="S_txt2">评论</span></a>
-                        <a class="btn btn-primary" href="#fakelink"><strong class="W_f12"><?php echo ($vol["number3"]); ?></strong><span class="fui-heart"></span></a>
-                    </div> 
-                </div>
-            </div><?php endforeach; endif; else: echo "" ;endif; ?>     -->   
+       <script src="/thinkphp/Public/js/highcharts.js"></script>
+<script src="/thinkphp/Public/js/exporting.js"></script>
+<div id="week" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<hr/>
+<div id="day" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+	
           <meta charset="utf-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
@@ -332,12 +376,12 @@
                 <div class="info">
                     <div class="col-md-1">
                         <a href="##">
-                            <img class="head-img"  src="/PublicOpinionAnalysis/Public/img/sina.jpg" height="32" width="32" />
+                            <img class="head-img"  src="/thinkphp/Public/img/sina.jpg" height="32" width="32" />
                         </a>
                     </div>
                     <div class="col-md-11">
                         <div class="user-name user-about">
-                            <a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/personal?id=<?php echo ($weibo["userid"]); ?>"><?php echo ($weibo["user"]["username"]); ?></a>
+                            <a href="/thinkphp/index.php/Home/NewWeibo/personal?id=<?php echo ($weibo["userid"]); ?>"><?php echo ($weibo["user"]["username"]); ?></a>
                         </div>
                         <div class="user-info user-about"> 
                             <ul class="ul-user-info">
@@ -378,12 +422,8 @@
     </div>
 
 <br>
+
 <hr/>
-
-
-<script src="js/vendor/jquery.min.js"></script> 
-    <script src="js/vendor/video.js"></script>
-    <script src="js/flat-ui.min.js"></script>
 
 
 
