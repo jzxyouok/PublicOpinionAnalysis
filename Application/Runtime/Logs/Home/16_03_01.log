@@ -1,0 +1,170 @@
+[ 2016-03-01T10:20:50+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+
+[ 2016-03-01T10:20:54+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000186s ]
+
+[ 2016-03-01T10:20:55+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/css/vendor/bootstrap/css/bootstrap.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+
+[ 2016-03-01T10:20:55+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/css/flat-ui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-03-01T10:20:55+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/vendor/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+
+[ 2016-03-01T10:20:55+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/vendor/video.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+
+[ 2016-03-01T10:20:55+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+
+[ 2016-03-01T10:20:55+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/flat-ui.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+
+[ 2016-03-01T10:20:55+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-03-01T10:21:00+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/personal?id=3633307617
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+
+[ 2016-03-01T10:21:00+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/css/vendor/bootstrap/css/bootstrap.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-03-01T10:21:00+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/css/flat-ui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+
+[ 2016-03-01T10:21:03+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/vendor/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+
+[ 2016-03-01T10:21:03+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/vendor/video.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-03-01T10:21:03+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/flat-ui.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+
+[ 2016-03-01T10:21:07+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+
+[ 2016-03-01T16:56:43+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+
+[ 2016-03-01T16:56:53+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+
+[ 2016-03-01T16:58:37+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-03-01T17:10:14+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006394s ]
+
+[ 2016-03-01T17:10:14+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+
+[ 2016-03-01T17:12:29+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+
+[ 2016-03-01T17:14:48+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/search?str=liuqi&type=id
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+
+[ 2016-03-01T17:14:48+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/css/vendor/bootstrap/css/bootstrap.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+
+[ 2016-03-01T17:14:48+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/vendor/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+
+[ 2016-03-01T17:14:48+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/css/flat-ui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000196s ]
+
+[ 2016-03-01T17:14:48+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/vendor/video.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000193s ]
+
+[ 2016-03-01T17:14:48+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/flat-ui.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+
+[ 2016-03-01T17:15:01+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/personal?id=1234
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-03-01T17:15:01+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/css/vendor/bootstrap/css/bootstrap.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-03-01T17:15:01+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/css/flat-ui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+
+[ 2016-03-01T17:15:01+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/vendor/video.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-03-01T17:15:01+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/vendor/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+
+[ 2016-03-01T17:15:01+08:00 ] 127.0.0.1 /PublicOpinionAnalysis/index.php/Home/NewWeibo/js/flat-ui.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005936s ]
+
