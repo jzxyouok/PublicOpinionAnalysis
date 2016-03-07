@@ -117,11 +117,11 @@
 
   <!DOCTYPE html>
   <html lang="zh-CN">
-   <head> 
-    <meta charset="utf-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
-    <link href="css/flat-ui.css" rel="stylesheet" /> 
+   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/flat-ui.css" rel="stylesheet" />
     <style type="text/css">
              .navbar ,.navbar-inverse ,.navbar-embossed, #all-carousel
   {
@@ -317,154 +317,154 @@
     font-size: 30px;
   }
 
-      </style> 
-   </head> 
-   <body> 
-    <div class="container"> 
-     <div id="all-carousel" class="carousel slide" data-ride="carousel"> 
-      <ol class="carousel-indicators"> 
-       <li data-target="#ad-carousel" data-slide-to="0" class="active"></li> 
-       <li data-target="#ad-carousel" data-slide-to="1"></li> 
-       <li data-target="#ad-carousel" data-slide-to="2"></li> 
-       <li data-target="#ad-carousel" data-slide-to="3"></li> 
-      </ol> 
-      <div class="carousel-inner"> 
-       <div class="item active"> 
-        <img src="/thinkphp/Public/img/1.jpg" alt="1 slide" /> 
-        <div class="container"> 
-         <div class="carousel-caption"> 
-          <p><img id="icon-img" src="/thinkphp/Public/img/Qzone.png" alt="wrong" /> </p> 
-          <h1>QQ空间</h1> 
+      </style>
+   </head>
+   <body>
+    <div class="container">
+     <div id="all-carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+       <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+       <li data-target="#ad-carousel" data-slide-to="1"></li>
+       <li data-target="#ad-carousel" data-slide-to="2"></li>
+       <li data-target="#ad-carousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+       <div class="item active">
+        <img src="/thinkphp/Public/img/2.jpg" alt="2 slide" />
+        <div class="container">
+         <div class="carousel-caption">
+          <p><img id="icon-img" src="/thinkphp/Public/img/sina.png" alt="" /> </p>
+          <h1>新浪微博</h1>
+          <p><a class="btn btn-block btn-lg btn-danger" target="_blank" role="button" href="/thinkphp/index.php/Home/NewWeibo">Enter</a></p>
+         </div>
+        </div>
+       </div>
+       <div class="item">
+        <img src="/thinkphp/Public/img/1.jpg" alt="1 slide" />
+        <div class="container">
+         <div class="carousel-caption">
+          <p><img id="icon-img" src="/thinkphp/Public/img/Qzone.png" alt="wrong" /> </p>
+          <h1>QQ空间</h1>
           <p><a class="btn btn-block btn-lg btn-warning
-                          btn-primary" target="_blank" role="button">Enter</a></p> 
-         </div> 
-        </div> 
-       </div> 
-       <div class="item"> 
-        <img src="/thinkphp/Public/img/2.jpg" alt="2 slide" /> 
-        <div class="container"> 
-         <div class="carousel-caption"> 
-          <p><img id="icon-img" src="/thinkphp/Public/img/sina.png" alt="" /> </p> 
-          <h1>新浪微博</h1> 
-          <p><a class="btn btn-block btn-lg btn-danger" target="_blank" role="button">Enter</a></p> 
-         </div> 
-        </div> 
-       </div> 
-       <div class="item"> 
-        <img src="/thinkphp/Public/img/3.jpg" alt="3 slide" /> 
-        <div class="container"> 
-         <div class="carousel-caption"> 
-          <p><img id="icon-img" src="/thinkphp/Public/img/baidu.png" alt="" /> </p> 
-          <h1>百度贴吧</h1> 
-          <p><a class="btn btn-block btn-lg btn-info" target="_blank" role="button">Enter</a></p> 
-         </div> 
-        </div> 
-       </div> 
-       <div class="item"> 
-        <img src="/thinkphp/Public/img/4.jpg" alt="4 slide" /> 
-        <div class="container"> 
-         <div class="carousel-caption"> 
-          <h1>数据分析</h1> 
-          <p><a class="btn btn-block btn-lg btn-success" target="_blank" role="button">Enter</a></p> 
-         </div> 
-        </div> 
-       </div> 
-      </div> 
-      <a class="left carousel-control" href="#all-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> 
-      <a class="right carousel-control" href="#all-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> 
-     </div> 
-     <div class="container summary"> 
-      <div class="row" id="summary-container"> 
-       <div class="col-md-4"> 
-        <img class="img-circle" src="images/image1.jpg" alt="pic" /> 
-        <h2>Tip1</h2> 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> 
-        <p><a class="btn btn-default" role="button">Enter</a></p> 
-       </div> 
-       <div class="col-md-4"> 
-        <img class="img-circle" src="images/image2.jpg" alt="pic" /> 
-        <h2>Tip2</h2> 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> 
-        <p><a class="btn btn-default" role="button">Enter</a></p> 
-       </div> 
-       <div class="col-md-4"> 
-        <img class="img-circle" src="images/image3.jpg" alt="pic" /> 
-        <h2>Tip3</h2> 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> 
-        <p><a class="btn btn-default" role="button">Enter</a></p> 
-       </div> 
-      </div> 
-      <hr class="feature-divider" /> 
-      <ul class="nav nav-tabs" role="tablist" id="feature-tab"> 
-       <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">数据展示1</a></li> 
-       <li><a href="#tab-2" role="tab" data-toggle="tab">数据展示2</a></li> 
-       <li><a href="#tab-3" role="tab" data-toggle="tab">数据展示3</a></li> 
-       <li><a href="#tab-4" role="tab" data-toggle="tab">数据展示4</a></li> 
-       <li><a href="#tab-5" role="tab" data-toggle="tab">数据展示5</a></li> 
-      </ul> 
-      <div class="tab-content"> 
-       <div class="tab-pane active" id="tab-1"> 
-        <div class="row feature"> 
-         <div class="col-md-8"> 
-          <h2 class="feature-heading">数据分析1<span class="text-muted">数据分析1</span></h2> 
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
-         </div> 
-         <div class="col-md-4"> 
-          <img class="feature-image img-responsive" src="" alt="图表、图片" /> 
-         </div> 
-        </div> 
-       </div> 
-       <div class="tab-pane" id="tab-2"> 
-        <div class="row feature"> 
-         <div class="col-md-4"> 
-          <img class="feature-image img-responsive" src="" alt="图表、图片" /> 
-         </div> 
-         <div class="col-md-8"> 
-          <h2 class="feature-heading">数据分析2<span class="text-muted">数据分析2</span> </h2> 
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
-         </div> 
-        </div> 
-       </div> 
-       <div class="tab-pane" id="tab-3"> 
-        <div class="row feature"> 
-         <div class="col-md-8"> 
-          <h2 class="feature-heading">数据分析3<span class="text-muted">数据分析3</span></h2> 
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
-         </div> 
-         <div class="col-md-4"> 
-          <img class="feature-image img-responsive" src="#" alt="图表、图片" /> 
-         </div> 
-        </div> 
-       </div> 
-       <div class="tab-pane" id="tab-4"> 
-        <div class="row feature"> 
-         <div class="col-md-8"> 
-          <img class="feature-image img-responsive" src="#" alt="图表、图片" /> 
-         </div> 
-         <div class="col-md-4"> 
-          <h2 class="feature-heading">数据分析4<span class="text-muted">数据分析4</span> </h2> 
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
-         </div> 
-        </div> 
-       </div> 
-       <div class="tab-pane" id="tab-5"> 
-        <div class="row feature"> 
-         <div class="col-md-4"> 
-          <h2 class="feature-heading">数据分析5<span class="text-muted">数据分析5</span></h2> 
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
-         </div> 
-         <div class="col-md-8"> 
-          <img class="feature-image img-responsive" src="#" alt="图表、图片" /> 
-         </div> 
-        </div> 
-       </div> 
-      </div> 
-      <footer> 
-       <p class="pull-right"><a href="#top">回到顶部</a></p> 
-       <p>&copy;哈工大网络中心</p> 
-      </footer> 
-     </div> 
-    </div> 
+                          btn-primary" target="_blank" role="button">Enter</a></p>
+         </div>
+        </div>
+       </div>
+       <div class="item">
+        <img src="/thinkphp/Public/img/3.jpg" alt="3 slide" />
+        <div class="container">
+         <div class="carousel-caption">
+          <p><img id="icon-img" src="/thinkphp/Public/img/baidu.png" alt="" /> </p>
+          <h1>百度贴吧</h1>
+          <p><a class="btn btn-block btn-lg btn-info" target="_blank" role="button">Enter</a></p>
+         </div>
+        </div>
+       </div>
+       <div class="item">
+        <img src="/thinkphp/Public/img/4.jpg" alt="4 slide" />
+        <div class="container">
+         <div class="carousel-caption">
+          <h1>数据分析</h1>
+          <p><a class="btn btn-block btn-lg btn-success" target="_blank" role="button">Enter</a></p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <a class="left carousel-control" href="#all-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#all-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+     </div>
+     <div class="container summary">
+      <div class="row" id="summary-container">
+       <div class="col-md-4">
+        <img class="img-circle" src="images/image1.jpg" alt="pic" />
+        <h2>Tip1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p><a class="btn btn-default" role="button">Enter</a></p>
+       </div>
+       <div class="col-md-4">
+        <img class="img-circle" src="images/image2.jpg" alt="pic" />
+        <h2>Tip2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p><a class="btn btn-default" role="button">Enter</a></p>
+       </div>
+       <div class="col-md-4">
+        <img class="img-circle" src="images/image3.jpg" alt="pic" />
+        <h2>Tip3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p><a class="btn btn-default" role="button">Enter</a></p>
+       </div>
+      </div>
+      <hr class="feature-divider" />
+      <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+       <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">数据展示1</a></li>
+       <li><a href="#tab-2" role="tab" data-toggle="tab">数据展示2</a></li>
+       <li><a href="#tab-3" role="tab" data-toggle="tab">数据展示3</a></li>
+       <li><a href="#tab-4" role="tab" data-toggle="tab">数据展示4</a></li>
+       <li><a href="#tab-5" role="tab" data-toggle="tab">数据展示5</a></li>
+      </ul>
+      <div class="tab-content">
+       <div class="tab-pane active" id="tab-1">
+        <div class="row feature">
+         <div class="col-md-8">
+          <h2 class="feature-heading">数据分析1<span class="text-muted">数据分析1</span></h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+         </div>
+         <div class="col-md-4">
+          <img class="feature-image img-responsive" src="" alt="图表、图片" />
+         </div>
+        </div>
+       </div>
+       <div class="tab-pane" id="tab-2">
+        <div class="row feature">
+         <div class="col-md-4">
+          <img class="feature-image img-responsive" src="" alt="图表、图片" />
+         </div>
+         <div class="col-md-8">
+          <h2 class="feature-heading">数据分析2<span class="text-muted">数据分析2</span> </h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+         </div>
+        </div>
+       </div>
+       <div class="tab-pane" id="tab-3">
+        <div class="row feature">
+         <div class="col-md-8">
+          <h2 class="feature-heading">数据分析3<span class="text-muted">数据分析3</span></h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+         </div>
+         <div class="col-md-4">
+          <img class="feature-image img-responsive" src="#" alt="图表、图片" />
+         </div>
+        </div>
+       </div>
+       <div class="tab-pane" id="tab-4">
+        <div class="row feature">
+         <div class="col-md-8">
+          <img class="feature-image img-responsive" src="#" alt="图表、图片" />
+         </div>
+         <div class="col-md-4">
+          <h2 class="feature-heading">数据分析4<span class="text-muted">数据分析4</span> </h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+         </div>
+        </div>
+       </div>
+       <div class="tab-pane" id="tab-5">
+        <div class="row feature">
+         <div class="col-md-4">
+          <h2 class="feature-heading">数据分析5<span class="text-muted">数据分析5</span></h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+         </div>
+         <div class="col-md-8">
+          <img class="feature-image img-responsive" src="#" alt="图表、图片" />
+         </div>
+        </div>
+       </div>
+      </div>
+      <footer>
+       <p class="pull-right"><a href="#top">回到顶部</a></p>
+       <p>&copy;哈工大网络中心</p>
+      </footer>
+     </div>
+    </div>
     <script>
           $(function ()
   {
@@ -481,10 +481,10 @@
                   }
               });
           });
-      </script> 
-    <script src="js/vendor/jquery.min.js"></script> 
-    <script src="js/vendor/video.js"></script> 
-    <script src="js/flat-ui.min.js"></script>  
+      </script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/video.js"></script>
+    <script src="js/flat-ui.min.js"></script>
    </body>
   </html>
 

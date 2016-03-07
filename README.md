@@ -58,3 +58,7 @@ sql导入的文件放在[这里](https://coding.net/u/mkliu/p/PublicOpinionAnaly
 1. 适配完成导航栏,和detail部分
 2. 解决了部分bug,基本上是因为大小写问题导致的,目前功能运行正常
 3. 有待进一步适配和使用新的组件
+
+##2016/3/4更新内容
+1. 小的bug修复
+2. NewWeiboController里添加了timechange函数，把totalweibo里面的time转换为时间戳，注意要先在表中添加字段timestamp，类型为时间戳

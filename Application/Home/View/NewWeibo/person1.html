@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8" /> 
-	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
-	<link href="__PUBLIC__/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="__PUBLIC__/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="__PUBLIC__/css/flat-ui.css" rel="stylesheet" />
 	<style type="text/css">
 		body{
@@ -60,7 +61,7 @@
 	<volist name="data" id="user">
 	<div class="list_person clearfix">
 		<div class="person_pic col-md-2"><a target="#" href="#" title="head-img" ><img class="head-img" src="http://tp1.sinaimg.cn/3787942764/180/5743216744/1" height="120" width="120"></a></div>
-		<div class="person_detail col-md-10">
+		<div class="person_detail col-md-10" style="min-width: 900px；">
 			<p class="person_name">
 				<a class="person_username" target="#" href="__URL__/personal?id=<{$user.userid}>" title="username" >
 					<{$user.username}>
@@ -94,8 +95,8 @@
 			</div>
 		</div>
 	</volist>
-		<script src="__PUBLIC__/js/vendor/jquery.min.js"></script> 
+		<script src="__PUBLIC__/js/vendor/jquery.min.js"></script>
 		<script src="__PUBLIC__/js/vendor/video.js"></script>
-		<script src="__PUBLIC__/js/flat-ui.min.js"></script> 
+		<script src="__PUBLIC__/js/flat-ui.min.js"></script>
 	</body>
 	</html>

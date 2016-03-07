@@ -116,7 +116,6 @@
  
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Highcharts Example</title>
 
 	<script src="/thinkphp/Public/js/jquery.js"></script>
 	<style type="text/css">
@@ -158,11 +157,11 @@
 		    });
 		    $('#day').highcharts({
 			title: {
-			    text: '全部微博数量按月分析',
+			    text: '全部微博数量按日分析',
 			    x: -20 //center
 			},
 			xAxis: {
-			    categories: ['0',"1", "2", "3", "4", "5", "6",'7',"8", "9", "10", "11", "12", "13",'14',"15", "16", "17", "18", "19", "20",'21',"22", "23"]
+			    categories: ['0', '1', "2", "3", "4", "5", "6",'7',"8", "9", "10", "11", "12", "13",'14',"15", "16", "17", "18", "19", "20",'21',"22", "23"]
 			},
 			yAxis: {
 			    title: {
@@ -188,8 +187,26 @@
 			    data: <?php echo ($hours); ?>
 			}]
 		    });
-
-
+                          $('#hotWords').highcharts({
+                                chart: {
+                                    type: 'column'
+                                },
+                                title: {
+                                    text: 'hot words'
+                                },
+                                xAxis: {
+                                    categories: <?php echo ($words); ?>
+                                },
+                                yAxis: {
+                                    title: {
+                                        text: 'numbers'
+                                    }
+                                },
+                                  series: [{
+                                            name: 'words',
+                                            data: [<?php if(is_array($numbers)): foreach($numbers as $key=>$vo): echo ($vo["number"]); ?>,<?php endforeach; endif; ?>]
+                                        }]
+                            });
 		});
 	</script>
 
@@ -197,7 +214,7 @@
 </head>
 
 
-	
+
     <div class="every">
         <div class="all">
             <div class="id">
@@ -255,13 +272,17 @@
         <link rel="stylesheet" href="/thinkphp/Public/css/weiboindex.css">
         <div class="exp">
         	<script src="/thinkphp/Public/js/highcharts.js"></script>
-		<script src="/thinkphp/Public/js/exporting.js"></script>
-		<div id="week" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-		<div id="day" style="min-width: 310px; height: 400px; margin: 0 auto"></div>    
+	<script src="/thinkphp/Public/js/exporting.js"></script>
+            <div id="hotWords" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            <hr/>
+	<div id="week" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            <hr/>
+	<div id="day" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            <hr/>
         </div>
-	
+
 	<hr/>
-	
+
 
 
 </body>

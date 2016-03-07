@@ -14,6 +14,13 @@ class TotalWeiboModel extends RelationModel {
         ),
     );
 
+    public function searchDetail($str)
+    {
+        $data['weiboid'] = $str;
+        $arr = $this->relation(true)->where($data)->find();
+        return $arr;
+    }
+
     public function search($str)
     {
     	$data['content'] =array('like',array("%$str%"));

@@ -114,11 +114,10 @@
 <script src="/PublicOpinionAnalysis/Public/js/flat-ui.min.js"></script>
 
  
-    
-    <meta charset="utf-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
-    <link href="css/flat-ui.css" rel="stylesheet" />    
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/flat-ui.css" rel="stylesheet" />
     <style type="text/css">
         .weibo-content .head-img{
             width: 60px;
@@ -191,7 +190,7 @@
 <body>
      <div class="weibos">
         <div class="weibo-content">
-            <div class="weibo-index">
+        <?php if(is_array($weibos)): $i = 0; $__LIST__ = $weibos;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$weibo): $mod = ($i % 2 );++$i;?><div class="weibo-index">
                 <div class="info">
                     <div class="col-md-1">
                         <a href="##">
@@ -202,7 +201,7 @@
                         <div class="user-name user-about">
                             <a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/personal?id=<?php echo ($weibo["userid"]); ?>"><?php echo ($weibo["user"]["username"]); ?></a>
                         </div>
-                        <div class="user-info user-about"> 
+                        <div class="user-info user-about">
                             <ul class="ul-user-info">
                                 <li><a href="#"><?php echo ($weibo["time"]); ?></a></li>
                                 <li>From:</li>
@@ -213,7 +212,9 @@
                 </div>
                 <div class="content">
                     <p>
+                        <a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/detail?id=<?php echo ($weibo["weiboid"]); ?>">
                         <?php echo ($weibo["content"]); ?>
+                        </a>
                     </p>
                 </div>
                 <div class="pictures">
@@ -229,15 +230,16 @@
                     <a class="btn btn-primary" href="#"><strong class="W_f12"><?php echo ($weibo["number1"]); ?></strong><span class="S_txt2">转发</span></a>
                     <a class="btn btn-primary" href="#"><strong class="W_f12"><?php echo ($weibo["number2"]); ?></strong><span class="S_txt2">评论</span></a>
                     <a class="btn btn-primary" href="#"><strong class="W_f12"><?php echo ($weibo["number3"]); ?></strong><span class="fui-heart"></span></a>
-                </div> 
-            </div>
+                </div>
+            </div><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
     </div>
         <hr/>
-    <script src="js/vendor/jquery.min.js"></script> 
+    <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/video.js"></script>
-    <script src="js/flat-ui.min.js"></script> 
+    <script src="js/flat-ui.min.js"></script>
 </body>
+
 
 
 </body>

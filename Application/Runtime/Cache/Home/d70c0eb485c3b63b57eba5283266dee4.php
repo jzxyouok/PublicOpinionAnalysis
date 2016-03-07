@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/PublicOpinionAnalysis/Public/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/PublicOpinionAnalysis/Public/css/flat-ui.css" rel="stylesheet">
+    <link href="/thinkphp/Public/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/thinkphp/Public/css/flat-ui.css" rel="stylesheet">
     <style type="text/css">
        .navbar ,.navbar-inverse ,.navbar-embossed{
            font-size: 13px;
@@ -49,7 +49,7 @@
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
                 <span class="sr-only">Toggle navigation</span>
             </button>
-            <a class="navbar-brand" href="/PublicOpinionAnalysis/index.php/Home/index">Public Opinion Analysis</a>
+            <a class="navbar-brand" href="/thinkphp/index.php/Home/index">Public Opinion Analysis</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-01">
           <ul class="nav navbar-nav navbar-left">
@@ -58,11 +58,11 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">微博 <b class="caret"></b></a>
                   <span class="dropdown-arrow"></span>
                   <ul class="dropdown-menu">
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/index">Main</a></li>
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/search">Search</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/index">Main</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/search">Search</a></li>
                     <li class="divider"></li>
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/personal">Personal</a></li>
-                    <li><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/detail">Details</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/personal">Personal</a></li>
+                    <li><a href="/thinkphp/index.php/Home/NewWeibo/detail">Details</a></li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -70,25 +70,25 @@
               <span class="dropdown-arrow"></span>
               <ul class="dropdown-menu">
                 <li><a href="#">Main</a></li>
-                <li><a href="/PublicOpinionAnalysis/index.php/Home/qq">Search</a></li>
+                <li><a href="/thinkphp/index.php/Home/qq">Search</a></li>
                 <li class="divider"></li>
-                <li><a href="/PublicOpinionAnalysis/index.php/Home/qq/personal">Personal</a></li>
-                <li><a href="/PublicOpinionAnalysis/index.php/Home/qq/detail">Details</a></li>
+                <li><a href="/thinkphp/index.php/Home/qq/personal">Personal</a></li>
+                <li><a href="/thinkphp/index.php/Home/qq/detail">Details</a></li>
             </ul>
         </li>
         <li class="dropdown">
           <a href="##" class="dropdown-toggle" data-toggle="dropdown">贴吧 <b class="caret"></b></a>
           <span class="dropdown-arrow"></span>
           <ul class="dropdown-menu">
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/index">Main</a></li>
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/search">Search</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/index">Main</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/search">Search</a></li>
             <li class="divider"></li>
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/personal">Personal</a></li>
-            <li><a href="/PublicOpinionAnalysis/index.php/Home/tieba/detail">Details</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/personal">Personal</a></li>
+            <li><a href="/thinkphp/index.php/Home/tieba/detail">Details</a></li>
         </ul>
     </li>
 </ul>
-<form class="form navbar-form navbar-right" action="/PublicOpinionAnalysis/index.php/Home/NewWeibo/search" role="search" method="get">
+<form class="form navbar-form navbar-right" action="/thinkphp/index.php/Home/NewWeibo/search" role="search" method="get">
     <div class="form-group">
       <div class="input-group">
         <input class="form-control" id="navbarInput-01"  placeholder="Search" type="text" placeholder="请输入关键词" name = "str"/>
@@ -109,20 +109,21 @@
 </div>   
 </div>
 
-<script src="/PublicOpinionAnalysis/Public/js/vendor/jquery.min.js"></script>
-<script src="/PublicOpinionAnalysis/Public/js/vendor/video.js"></script>
-<script src="/PublicOpinionAnalysis/Public/js/flat-ui.min.js"></script>
+<script src="/thinkphp/Public/js/vendor/jquery.min.js"></script>
+<script src="/thinkphp/Public/js/vendor/video.js"></script>
+<script src="/thinkphp/Public/js/flat-ui.min.js"></script>
 
  
 
 
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8" /> 
-	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
-	<link href="/PublicOpinionAnalysis/Public/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
-	<link href="/PublicOpinionAnalysis/Public/css/flat-ui.css" rel="stylesheet" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="/thinkphp/Public/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/thinkphp/Public/css/flat-ui.css" rel="stylesheet" />
 	<style type="text/css">
 		body{
 			background-color: #BDC3C7;
@@ -177,9 +178,9 @@
 <body>
 	<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$user): $mod = ($i % 2 );++$i;?><div class="list_person clearfix">
 		<div class="person_pic col-md-2"><a target="#" href="#" title="head-img" ><img class="head-img" src="http://tp1.sinaimg.cn/3787942764/180/5743216744/1" height="120" width="120"></a></div>
-		<div class="person_detail col-md-10">
+		<div class="person_detail col-md-10" style="min-width: 900px；">
 			<p class="person_name">
-				<a class="person_username" target="#" href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/personal?id=<?php echo ($user["userid"]); ?>" title="username" >
+				<a class="person_username" target="#" href="/thinkphp/index.php/Home/NewWeibo/personal?id=<?php echo ($user["userid"]); ?>" title="username" >
 					<?php echo ($user["username"]); ?>
 				</a>
 				<a target="#" href="##" title="微博认证" alt="微博认证" class="approve_co"></a>
@@ -210,15 +211,16 @@
 				</p>
 			</div>
 		</div><?php endforeach; endif; else: echo "" ;endif; ?>
-		<script src="/PublicOpinionAnalysis/Public/js/vendor/jquery.min.js"></script> 
-		<script src="/PublicOpinionAnalysis/Public/js/vendor/video.js"></script>
-		<script src="/PublicOpinionAnalysis/Public/js/flat-ui.min.js"></script> 
+		<script src="/thinkphp/Public/js/vendor/jquery.min.js"></script>
+		<script src="/thinkphp/Public/js/vendor/video.js"></script>
+		<script src="/thinkphp/Public/js/flat-ui.min.js"></script>
 	</body>
 	</html>
-  <meta charset="utf-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
-    <link href="css/flat-ui.css" rel="stylesheet" />    
+
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/flat-ui.css" rel="stylesheet" />
     <style type="text/css">
         .weibo-content .head-img{
             width: 60px;
@@ -295,14 +297,14 @@
                 <div class="info">
                     <div class="col-md-1">
                         <a href="##">
-                            <img class="head-img"  src="/PublicOpinionAnalysis/Public/img/sina.jpg" height="32" width="32" />
+                            <img class="head-img"  src="/thinkphp/Public/img/sina.jpg" height="32" width="32" />
                         </a>
                     </div>
                     <div class="col-md-11">
                         <div class="user-name user-about">
-                            <a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/personal?id=<?php echo ($weibo["userid"]); ?>"><?php echo ($weibo["user"]["username"]); ?></a>
+                            <a href="/thinkphp/index.php/Home/NewWeibo/personal?id=<?php echo ($weibo["userid"]); ?>"><?php echo ($weibo["user"]["username"]); ?></a>
                         </div>
-                        <div class="user-info user-about"> 
+                        <div class="user-info user-about">
                             <ul class="ul-user-info">
                                 <li><a href="#"><?php echo ($weibo["time"]); ?></a></li>
                                 <li>From:</li>
@@ -313,7 +315,9 @@
                 </div>
                 <div class="content">
                     <p>
+                        <a href="/thinkphp/index.php/Home/NewWeibo/detail?id=<?php echo ($weibo["weiboid"]); ?>">
                         <?php echo ($weibo["content"]); ?>
+                        </a>
                     </p>
                 </div>
                 <div class="pictures">
@@ -329,25 +333,26 @@
                     <a class="btn btn-primary" href="#"><strong class="W_f12"><?php echo ($weibo["number1"]); ?></strong><span class="S_txt2">转发</span></a>
                     <a class="btn btn-primary" href="#"><strong class="W_f12"><?php echo ($weibo["number2"]); ?></strong><span class="S_txt2">评论</span></a>
                     <a class="btn btn-primary" href="#"><strong class="W_f12"><?php echo ($weibo["number3"]); ?></strong><span class="fui-heart"></span></a>
-                </div> 
+                </div>
             </div><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
     </div>
         <hr/>
-    <script src="js/vendor/jquery.min.js"></script> 
+    <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/video.js"></script>
-    <script src="js/flat-ui.min.js"></script> 
+    <script src="js/flat-ui.min.js"></script>
 </body>
+
 <!-- <div class="all">
 
 <?php if(isset($data)): ?><div class="id" id="id">
         <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="iditem">
                 <a href="#">
                     <div class="headimg">
-                        <a href="#"><img src="/PublicOpinionAnalysis/Public/img/sina.jpg" width="128" height="128"></a>
+                        <a href="#"><img src="/thinkphp/Public/img/sina.jpg" width="128" height="128"></a>
                     </div>
                     <div class="info">
-                        <div class="uname"><h3><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/personal?id=<?php echo ($vo["userid"]); ?>"><?php echo ($vo["username"]); ?></a></h3></div>
+                        <div class="uname"><h3><a href="/thinkphp/index.php/Home/NewWeibo/personal?id=<?php echo ($vo["userid"]); ?>"><?php echo ($vo["username"]); ?></a></h3></div>
                         <div class="i">
                             <div class="line1">
                                 <p class="vip"><?php echo ($vo["individualsignature"]); ?></p>
@@ -360,7 +365,7 @@
                             </div>
                             <div class="line2">
                                 <p class="attentioncount">关注:<?php echo ($vo["number1"]); ?></p>
-                                <p class="fanscount"><a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/getFans?id=<?php echo ($vo["fans"]); ?>">粉丝：<?php echo ($vo["number2"]); ?></a></p>
+                                <p class="fanscount"><a href="/thinkphp/index.php/Home/NewWeibo/getFans?id=<?php echo ($vo["fans"]); ?>">粉丝：<?php echo ($vo["number2"]); ?></a></p>
                                 <p class="weibocount">微博:<?php echo ($vo["number3"]); ?></p>
                                 <p class="space"></p>
                             </div>
@@ -370,20 +375,20 @@
             </div>
             <hr /><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
-    <?php if(!isset($weibo)): ?><link rel="stylesheet" type="text/css" href="/PublicOpinionAnalysis/Public/css/id.css"><?php endif; endif; ?>
+    <?php if(!isset($weibo)): ?><link rel="stylesheet" type="text/css" href="/thinkphp/Public/css/id.css"><?php endif; endif; ?>
 <?php if(isset($weibos)): ?><div class="content">
    <?php if(is_array($weibo)): $i = 0; $__LIST__ = $weibo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><div>
            <header class="header">
-               <a href="#" ><img src="/PublicOpinionAnalysis/Public/img/sina.jpg" height="32" width="32"></a>
+               <a href="#" ><img src="/thinkphp/Public/img/sina.jpg" height="32" width="32"></a>
                <div class="idcontent">
-                   <a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/personal?id=<?php echo ($vol["userid"]); ?>" class="idname"><?php echo ($vol["user"]["username"]); ?></a>
+                   <a href="/thinkphp/index.php/Home/NewWeibo/personal?id=<?php echo ($vol["userid"]); ?>" class="idname"><?php echo ($vol["user"]["username"]); ?></a>
                    <div class="idinfo">
                        <p><?php echo ($vol["time"]); ?></p>
                        <p><a href="#"><?php echo ($vol["datasource"]); ?></a></p>
                    </div>
                </div>
            </header>
-           <a href="/PublicOpinionAnalysis/index.php/Home/NewWeibo/detail?id=<?php echo ($vol["id"]); ?>">
+           <a href="/thinkphp/index.php/Home/NewWeibo/detail?id=<?php echo ($vol["id"]); ?>">
            <section class="contentsection">
                <p class="text"><?php echo ($vol["content"]); ?></p>
                <div class="pic">
@@ -404,9 +409,9 @@
        <hr/><?php endforeach; endif; else: echo "" ;endif; ?>
   </div>
 
-  <?php if(!isset($data)): ?><link rel="stylesheet" type="text/css" href="/PublicOpinionAnalysis/Public/css/content.css">
+  <?php if(!isset($data)): ?><link rel="stylesheet" type="text/css" href="/thinkphp/Public/css/content.css">
   <?php else: ?>
-    <link rel="stylesheet" type="text/css" href="/PublicOpinionAnalysis/Public/css/both.css"><?php endif; endif; ?>
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/css/both.css"><?php endif; endif; ?>
 
 </div> -->
 

@@ -116,10 +116,10 @@
  
 
 <head>
-    <meta charset="utf-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
-    <link href="css/flat-ui.css" rel="stylesheet" /> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/flat-ui.css" rel="stylesheet" />
     <style type="text/css">
         body{
             background-color: #ECF0F1;
@@ -196,7 +196,6 @@
 </head>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Highcharts Example</title>
 
 		<script src="/thinkphp/Public/js/jquery.js"></script>
 		<style type="text/css">
@@ -232,13 +231,13 @@ $(function () {
             borderWidth: 0
         },
         series: [{
-            name: 'user',
+            name: <?php echo ($username); ?>,
             data: <?php echo ($weeks); ?>
         }]
     });
     $('#day').highcharts({
         title: {
-            text:<?php echo ($username); ?>+'的每月微博分析',
+            text:<?php echo ($username); ?>+'的每日微博分析',
             x: -20 //center
         },
         xAxis: {
@@ -278,28 +277,128 @@ $(function () {
 
 
 
-<div class="container-personal">	
-        <div class="head">
+<div class="container-personal">
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="/thinkphp/Public/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/thinkphp/Public/css/flat-ui.css" rel="stylesheet" />
+	<style type="text/css">
+		body{
+			background-color: #BDC3C7;
+		}
+		.list_person{
+			background-color: #FFFFF4;
+			margin: 10px 200px;
+			border: 2px solid #7F8C8D;
+ 			padding: 16px 14px 17px 18px;
+		}
+		.list_person *{
+			font-family: "Microsoft YaHei";
+			font-size: 13px;
+			padding-right: 3px;
+		}
+		.list_person {
+		    color: #666;
+		}
+		.clearfix {
+		    display: inline-block;
+		}
+		body, .W_texta, a.W_texta, .S_txt1 {
+		    color: #333;
+		}
+		body {
+		    font: 12px/1.3 'Arial','Microsoft YaHei';
+		    _font-family: simsun;
+		    overflow-x: hidden;
+		    color: #333;
+		}
+		.list_person, button, input, select, textarea {
+		    font: 12px/1.125 Arial,Helvetica,sans-serif;
+		    _font-family: "SimSun";
+		}
+
+		.person_detail .person_name .person_username{
+			color: #2C3E50;
+			font-size: 18px;
+		}
+
+		.person_pic img{
+			border-radius: 60px;
+		}
+
+		p {
+		    font-size: 18px;
+		    line-height: 1.3;
+		    margin: 0 0 8px;
+		}
+	</style>
+</head>
+<body>
+	<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$user): $mod = ($i % 2 );++$i;?><div class="list_person clearfix">
+		<div class="person_pic col-md-2"><a target="#" href="#" title="head-img" ><img class="head-img" src="http://tp1.sinaimg.cn/3787942764/180/5743216744/1" height="120" width="120"></a></div>
+		<div class="person_detail col-md-10" style="min-width: 900px；">
+			<p class="person_name">
+				<a class="person_username" target="#" href="/thinkphp/index.php/Home/NewWeibo/personal?id=<?php echo ($user["userid"]); ?>" title="username" >
+					<?php echo ($user["username"]); ?>
+				</a>
+				<a target="#" href="##" title="微博认证" alt="微博认证" class="approve_co"></a>
+			</p>
+			<p class="person_addr">
+				<span class="gender" title="gender"><?php echo ($vo["sex"]); ?></span>
+				<br/>
+				<span>addr</span>
+				<a class="weibo-link" target="#" href="##">http://weibo.com/1234</a>
+
+			</p>
+			<p class="person_card">
+				<?php echo ($vo["individualsignature"]); ?>
+			</p>
+			<p class="person_num">
+				<span>关注<a class="Weibo_link" href="http://weibo.com/follow" target="#"><?php echo ($vo["number1"]); ?></a></span>
+				<span>粉丝<a class="Weibo_link" href="http://weibo.com/fans" target="#"><?php echo ($vo["number2"]); ?></a></span>
+				<span>微博<a class="Weibo_link" href="http://weibo.com/profile" target="#"><?php echo ($vo["number3"]); ?></a></span></p>
+				<div class="person_info">
+					<p>地址：
+						<?php echo ($vo["location"]); ?>
+					</p>
+				</div>
+				<p class="person_label">职业信息：
+					<a class="Weibo-link" href="#">
+						<?php echo ($vo["otherinfo"]); ?>
+					</a>
+				</p>
+			</div>
+		</div><?php endforeach; endif; else: echo "" ;endif; ?>
+		<script src="/thinkphp/Public/js/vendor/jquery.min.js"></script>
+		<script src="/thinkphp/Public/js/vendor/video.js"></script>
+		<script src="/thinkphp/Public/js/flat-ui.min.js"></script>
+	</body>
+	</html>
+
+        <!-- <div class="head">
             <div>
                 <a href="##">
                     <img class="head-img" src="/thinkphp/Public/img/sina.jpg" width="100" height="100">
                 </a>
                 <a href="##">
-                    <p><?php echo ($user["username"]); ?></p>
+                    <p><?php echo ($data["username"]); ?></p>
                 </a>
-                <p><?php echo ($user["individualsignature"]); ?></p>
+                <p><?php echo ($data["individualsignature"]); ?></p>
             </div>
-        </div>
-       <script src="/thinkphp/Public/js/highcharts.js"></script>
+        </div> -->
+<script src="/thinkphp/Public/js/highcharts.js"></script>
 <script src="/thinkphp/Public/js/exporting.js"></script>
-<div id="week" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="week" style="min-width: 310px; max-width: 909.0px; height: 400px; margin: 0 auto"></div>
 <hr/>
-<div id="day" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-	
-          <meta charset="utf-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> 
-    <link href="css/flat-ui.css" rel="stylesheet" />    
+<div id="day" style="min-width: 310px; max-width: 909.0px; height: 400px; margin: 0 auto"></div>
+        <div align="center">  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/flat-ui.css" rel="stylesheet" />
     <style type="text/css">
         .weibo-content .head-img{
             width: 60px;
@@ -383,7 +482,7 @@ $(function () {
                         <div class="user-name user-about">
                             <a href="/thinkphp/index.php/Home/NewWeibo/personal?id=<?php echo ($weibo["userid"]); ?>"><?php echo ($weibo["user"]["username"]); ?></a>
                         </div>
-                        <div class="user-info user-about"> 
+                        <div class="user-info user-about">
                             <ul class="ul-user-info">
                                 <li><a href="#"><?php echo ($weibo["time"]); ?></a></li>
                                 <li>From:</li>
@@ -394,7 +493,9 @@ $(function () {
                 </div>
                 <div class="content">
                     <p>
+                        <a href="/thinkphp/index.php/Home/NewWeibo/detail?id=<?php echo ($weibo["weiboid"]); ?>">
                         <?php echo ($weibo["content"]); ?>
+                        </a>
                     </p>
                 </div>
                 <div class="pictures">
@@ -410,15 +511,16 @@ $(function () {
                     <a class="btn btn-primary" href="#"><strong class="W_f12"><?php echo ($weibo["number1"]); ?></strong><span class="S_txt2">转发</span></a>
                     <a class="btn btn-primary" href="#"><strong class="W_f12"><?php echo ($weibo["number2"]); ?></strong><span class="S_txt2">评论</span></a>
                     <a class="btn btn-primary" href="#"><strong class="W_f12"><?php echo ($weibo["number3"]); ?></strong><span class="fui-heart"></span></a>
-                </div> 
+                </div>
             </div><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
     </div>
         <hr/>
-    <script src="js/vendor/jquery.min.js"></script> 
+    <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/video.js"></script>
-    <script src="js/flat-ui.min.js"></script> 
+    <script src="js/flat-ui.min.js"></script>
 </body>
+</div>
     </div>
 
 <br>
