@@ -1,7 +1,7 @@
 PublicOpinionAnalysis
 ---
 ##最新版本
-见liuqi.xyz
+见[liuqi.xyz](liuqi.xyz)
 
 ## database
 
